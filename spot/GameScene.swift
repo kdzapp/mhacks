@@ -8,8 +8,6 @@
 
 import SpriteKit
 
-//Set Up Players
-
 class GameScene: SKScene {
     
     
@@ -39,6 +37,8 @@ class GameScene: SKScene {
         let gamePhysics = SKPhysicsBody(edgeLoopFromRect: self.frame)
         self.physicsBody = gamePhysics
         
+        joystick.position = CGPoint(x: 200, y: 265)
+        
         //Create Map
         self.addChild(createMap())
         self.addChild(joystick)
@@ -46,24 +46,20 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
+        var location = CGPoint(x: 0, y: 0)
         
         for touch in touches {
-            let location = touch.locationInNode(self)
-            let projectile = Projectile(sprite: player)
-            
-            joystick.position = location
-            
-            if(touches.count > 1)
-            {
-                projectile.position = player.position
-                projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
-            
-                self.addChild(projectile)
-            }
-            
-            //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            //sprite.runAction(SKAction.repeatActionForever(action))
+            location = touch.locationInNode(self)
         }
+        
+        let projectile = Projectile(sprite: player)
+        projectile.position = player.position
+        projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
+            
+        self.addChild(projectile)
+        
+        //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
+        //sprite.runAction(SKAction.repeatActionForever(action)
         
     }
     

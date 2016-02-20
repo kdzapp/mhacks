@@ -30,7 +30,7 @@ class Projectile: SKSpriteNode {
     }
     
     func setVelocity(dy: CGFloat, dx: CGFloat) {
-        projectilePhysics.velocity = CGVector(dx: dx*(0.8), dy: dy*(0.8))
+        projectilePhysics.velocity = CGVector(dx: dx, dy: dy)
     }
     
 }
