@@ -8,6 +8,28 @@
 
 import Foundation
 
-class MapWall {
-    //Map Walls will all be instinces of this class
+
+struct size {
+    
+    var length = 0;
+    var width = 0;
+}
+
+class Wall {
+    
+    var wallsize = size();
+    
+    func getLength() -> Int {
+        return wallsize.length;
+    }
+    
+    func getWidth() -> Int {
+        return wallsize.width;
+    }
+    
+    init(length: Int, width: Int) {
+        wallsize.length = length;
+        wallsize.width = width;
+    }
+    
 }

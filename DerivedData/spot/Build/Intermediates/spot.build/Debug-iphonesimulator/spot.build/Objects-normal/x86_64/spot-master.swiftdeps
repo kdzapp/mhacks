@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "a9931796b8e7bf4bd5c98d6deff93971"
+build_time: [509246862, 491419000]
+inputs:
+  "/Users/mikewiitala/mhacks/spot/GameViewController.swift": [509246857, 0]
+  "/Users/mikewiitala/mhacks/spot/AppDelegate.swift": [509246857, 0]
+  "/Users/mikewiitala/mhacks/spot/GameScene.swift": [509246857, 0]
+  "/Users/mikewiitala/mhacks/spot/MapWall.swift": [509246854, 0]
+  "/Users/mikewiitala/mhacks/spot/ProjectileMod.swift": [509243480, 0]
+  "/Users/mikewiitala/mhacks/spot/SpriteMod.swift": [509243480, 0]
