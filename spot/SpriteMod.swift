@@ -33,6 +33,7 @@ class Sprite: SKSpriteNode{
         colorOfSprite = color
         
         //Load Sprite With Color
+        
         switch colorOfSprite {
         case .blue:
             spriteTexture = SKTexture.init(imageNamed: "Sprite3")
@@ -47,6 +48,7 @@ class Sprite: SKSpriteNode{
             spriteTexture = SKTexture.init(imageNamed: "Sprite1")
             break
         }
+        
         
         super.init(texture: spriteTexture, color: UIColor(), size: spriteSize)
         
@@ -64,7 +66,25 @@ class Sprite: SKSpriteNode{
     //------Member Functions-------//
     
     func setColor(color: spriteColor) {
+        
         colorOfSprite = color;
+        
+        switch colorOfSprite {
+        case .blue:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite3")
+            break
+        case .red:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite2")
+            break
+        case .yellow:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite4")
+            break
+        case .green:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite1")
+            break
+        }
+        
+        self.texture = spriteTexture
     }
     
     func setLocationLeft() {

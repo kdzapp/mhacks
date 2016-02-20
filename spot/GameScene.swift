@@ -8,15 +8,15 @@
 
 import SpriteKit
 
+//Set Up Players
+
 class GameScene: SKScene {
     
-    //Set Up Players
-    let player = Sprite(color: spriteColor.blue)
+    let player = Sprite(color: spriteColor.green)
     let enemy = Sprite(color: spriteColor.red)
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1);
     
     override func didMoveToView(view: SKView) {
-        /*Set Up Scene Here*/
         
         //Set Background Color
         self.scene?.backgroundColor = gameBackgroundColor
