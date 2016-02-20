@@ -55,18 +55,22 @@ class PlayerSelectGameScene: SKScene {
             switch node.name! {
             case "sprite1":
                 playGameScene!.player.setColor(spriteColor.green)
+                playGameScene!.enemy.setColor(spriteColor.yellow)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite2":
                 playGameScene!.player.setColor(spriteColor.red)
+                playGameScene!.enemy.setColor(spriteColor.blue)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite3":
                 playGameScene!.player.setColor(spriteColor.blue)
+                playGameScene!.enemy.setColor(spriteColor.red)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite4":
                 playGameScene!.player.setColor(spriteColor.yellow)
+                playGameScene!.enemy.setColor(spriteColor.green)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             default:
