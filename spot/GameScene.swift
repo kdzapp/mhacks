@@ -12,6 +12,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    
+    let joystick = AnalogJoystick(diameters: (substrate: 100, stick: 50), colors: (substrate: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.7), stick: UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)), images: (nil))
     let player = Sprite(color: spriteColor.green)
     let enemy = Sprite(color: spriteColor.red)
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1);
@@ -20,7 +22,8 @@ class GameScene: SKScene {
         
         //Set Background Color
         self.scene?.backgroundColor = gameBackgroundColor
-
+        joystick.name = "joystick"
+        
         
         player.setLocationLeft()
         enemy.setLocationRight()
@@ -28,12 +31,17 @@ class GameScene: SKScene {
         self.addChild(player)
         self.addChild(enemy)
         
+        joystick.trackingHandler = { jdata in
+            self.player.position = CGPointMake((self.player.position.x + jdata.velocity.x*0.1), (self.player.position.y + jdata.velocity.y*0.1))
+        }
+        
         //Physical Boarder
         let gamePhysics = SKPhysicsBody(edgeLoopFromRect: self.frame)
         self.physicsBody = gamePhysics
-
+        
         //Create Map
         self.addChild(createMap())
+        self.addChild(joystick)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -43,30 +51,37 @@ class GameScene: SKScene {
             let location = touch.locationInNode(self)
             let projectile = Projectile(sprite: player)
             
-            projectile.position = player.position
-            projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
+            joystick.position = location
             
-            self.addChild(projectile)
+            if(touches.count > 1)
+            {
+                projectile.position = player.position
+                projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
+            
+                self.addChild(projectile)
+            }
             
             //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
             //sprite.runAction(SKAction.repeatActionForever(action))
         }
+        
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            player.position = location
-        }
+        
     }
     
-    //override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    //    <#code#>
-    //}
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        for child in self.children as [SKNode] {
+//            if(child.name == "joystick")
+//            {
+//                self.removeChildrenInArray([child])
+//            }
+//        }
+    }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        //Updated Every Frame
     }
 }
 
