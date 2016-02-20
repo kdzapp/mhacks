@@ -26,6 +26,7 @@ class Sprite: SKSpriteNode{
     private var colorOfSprite: spriteColor
     private var location: CGPoint
     var spriteTexture: SKTexture
+    var spriteSize = CGSize(width: 100, height: 100)
     
     init(color: spriteColor) {
         
@@ -48,7 +49,7 @@ class Sprite: SKSpriteNode{
             break
         }
         
-        super.init(texture: spriteTexture, color: UIColor(), size: CGSize.init(width: 100, height: 100))
+        super.init(texture: spriteTexture, color: UIColor(), size: spriteSize)
         
     }
 
@@ -75,7 +76,6 @@ class Sprite: SKSpriteNode{
     func updateLocation(location: CGPoint) {
         
         self.location = location;
-        
     }
     
     func shoot () {
