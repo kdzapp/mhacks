@@ -9,6 +9,22 @@
 import Foundation
 import SpriteKit
 
-class ProjectileMod {
-    //Class of a Projectile
+class Projectile {
+    
+    private var colorOfProjectile: spriteColor;
+    private var location: CGPoint;
+    private var touchLocation: CGPoint;
+    
+    init (sprite: Sprite, touch: CGPoint) {
+        
+        colorOfProjectile = sprite.getColor();
+        self.location = sprite.getLocation();
+        touchLocation = touch;
+        
+    }
+    
+    func updateLocation() {
+        //location.x
+        //location.y
+    }
 }
