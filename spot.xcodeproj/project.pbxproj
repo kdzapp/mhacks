@@ -7,75 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		274E3C811C74B9DE00AE78C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3C801C74B9DE00AE78C1 /* AppDelegate.swift */; };
-		274E3C831C74B9DE00AE78C1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3C821C74B9DE00AE78C1 /* GameView.swift */; };
-		274E3C861C74B9DE00AE78C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274E3C841C74B9DE00AE78C1 /* Main.storyboard */; };
-		274E3C881C74B9DE00AE78C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274E3C871C74B9DE00AE78C1 /* Assets.xcassets */; };
-		274E3C8B1C74B9DE00AE78C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274E3C891C74B9DE00AE78C1 /* LaunchScreen.storyboard */; };
-		274E3C961C74B9DE00AE78C1 /* spotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3C951C74B9DE00AE78C1 /* spotTests.swift */; };
-		274E3CA11C74B9DE00AE78C1 /* spotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3CA01C74B9DE00AE78C1 /* spotUITests.swift */; };
-		274E3CAF1C74BC6400AE78C1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274E3CAE1C74BC6400AE78C1 /* SpriteKit.framework */; };
-		274E3CB31C74BF9B00AE78C1 /* SpriteMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3CB21C74BF9B00AE78C1 /* SpriteMod.swift */; };
-		274E3CB51C74C00100AE78C1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3CB41C74C00100AE78C1 /* GameScene.swift */; };
-		274E3CB71C74C1D300AE78C1 /* MapWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3CB61C74C1D300AE78C1 /* MapWall.swift */; };
-		274E3CB91C74D04B00AE78C1 /* ProjectileMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E3CB81C74D04B00AE78C1 /* ProjectileMod.swift */; };
+		273F99221C77F72D002F1B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99211C77F72D002F1B9B /* AppDelegate.swift */; };
+		273F99241C77F72D002F1B9B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 273F99231C77F72D002F1B9B /* GameScene.sks */; };
+		273F99261C77F72D002F1B9B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99251C77F72D002F1B9B /* GameScene.swift */; };
+		273F99281C77F72D002F1B9B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99271C77F72D002F1B9B /* GameViewController.swift */; };
+		273F992B1C77F72D002F1B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273F99291C77F72D002F1B9B /* Main.storyboard */; };
+		273F992D1C77F72D002F1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273F992C1C77F72D002F1B9B /* Assets.xcassets */; };
+		273F99301C77F72D002F1B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273F992E1C77F72D002F1B9B /* LaunchScreen.storyboard */; };
+		273F993B1C77F72D002F1B9B /* spotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F993A1C77F72D002F1B9B /* spotTests.swift */; };
+		273F99461C77F72D002F1B9B /* spotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99451C77F72D002F1B9B /* spotUITests.swift */; };
+		273F99561C77F7EA002F1B9B /* MapWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99531C77F7EA002F1B9B /* MapWall.swift */; };
+		273F99571C77F7EA002F1B9B /* ProjectileMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99541C77F7EA002F1B9B /* ProjectileMod.swift */; };
+		273F99581C77F7EA002F1B9B /* SpriteMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F99551C77F7EA002F1B9B /* SpriteMod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		274E3C921C74B9DE00AE78C1 /* PBXContainerItemProxy */ = {
+		273F99371C77F72D002F1B9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 274E3C751C74B9DE00AE78C1 /* Project object */;
+			containerPortal = 273F99161C77F72C002F1B9B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 274E3C7C1C74B9DE00AE78C1;
+			remoteGlobalIDString = 273F991D1C77F72D002F1B9B;
 			remoteInfo = spot;
 		};
-		274E3C9D1C74B9DE00AE78C1 /* PBXContainerItemProxy */ = {
+		273F99421C77F72D002F1B9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 274E3C751C74B9DE00AE78C1 /* Project object */;
+			containerPortal = 273F99161C77F72C002F1B9B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 274E3C7C1C74B9DE00AE78C1;
+			remoteGlobalIDString = 273F991D1C77F72D002F1B9B;
 			remoteInfo = spot;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		274E3C7D1C74B9DE00AE78C1 /* spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		274E3C801C74B9DE00AE78C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		274E3C821C74B9DE00AE78C1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		274E3C851C74B9DE00AE78C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		274E3C871C74B9DE00AE78C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		274E3C8A1C74B9DE00AE78C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		274E3C8C1C74B9DE00AE78C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		274E3C911C74B9DE00AE78C1 /* spotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		274E3C951C74B9DE00AE78C1 /* spotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotTests.swift; sourceTree = "<group>"; };
-		274E3C971C74B9DE00AE78C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		274E3C9C1C74B9DE00AE78C1 /* spotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		274E3CA01C74B9DE00AE78C1 /* spotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotUITests.swift; sourceTree = "<group>"; };
-		274E3CA21C74B9DE00AE78C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		274E3CAE1C74BC6400AE78C1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		274E3CB21C74BF9B00AE78C1 /* SpriteMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteMod.swift; sourceTree = "<group>"; };
-		274E3CB41C74C00100AE78C1 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		274E3CB61C74C1D300AE78C1 /* MapWall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWall.swift; sourceTree = "<group>"; };
-		274E3CB81C74D04B00AE78C1 /* ProjectileMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectileMod.swift; sourceTree = "<group>"; };
+		273F991E1C77F72D002F1B9B /* spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273F99211C77F72D002F1B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		273F99231C77F72D002F1B9B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		273F99251C77F72D002F1B9B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		273F99271C77F72D002F1B9B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		273F992A1C77F72D002F1B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		273F992C1C77F72D002F1B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		273F992F1C77F72D002F1B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		273F99311C77F72D002F1B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273F99361C77F72D002F1B9B /* spotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		273F993A1C77F72D002F1B9B /* spotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotTests.swift; sourceTree = "<group>"; };
+		273F993C1C77F72D002F1B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273F99411C77F72D002F1B9B /* spotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		273F99451C77F72D002F1B9B /* spotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotUITests.swift; sourceTree = "<group>"; };
+		273F99471C77F72D002F1B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273F99531C77F7EA002F1B9B /* MapWall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWall.swift; sourceTree = "<group>"; };
+		273F99541C77F7EA002F1B9B /* ProjectileMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectileMod.swift; sourceTree = "<group>"; };
+		273F99551C77F7EA002F1B9B /* SpriteMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteMod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		274E3C7A1C74B9DE00AE78C1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				274E3CAF1C74BC6400AE78C1 /* SpriteKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		274E3C8E1C74B9DE00AE78C1 /* Frameworks */ = {
+		273F991B1C77F72D002F1B9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274E3C991C74B9DE00AE78C1 /* Frameworks */ = {
+		273F99331C77F72D002F1B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		273F993E1C77F72D002F1B9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,58 +84,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		274E3C741C74B9DE00AE78C1 = {
+		273F99151C77F72C002F1B9B = {
 			isa = PBXGroup;
 			children = (
-				274E3CAE1C74BC6400AE78C1 /* SpriteKit.framework */,
-				274E3C7F1C74B9DE00AE78C1 /* spot */,
-				274E3C941C74B9DE00AE78C1 /* spotTests */,
-				274E3C9F1C74B9DE00AE78C1 /* spotUITests */,
-				274E3C7E1C74B9DE00AE78C1 /* Products */,
+				273F99201C77F72D002F1B9B /* spot */,
+				273F99391C77F72D002F1B9B /* spotTests */,
+				273F99441C77F72D002F1B9B /* spotUITests */,
+				273F991F1C77F72D002F1B9B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		274E3C7E1C74B9DE00AE78C1 /* Products */ = {
+		273F991F1C77F72D002F1B9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				274E3C7D1C74B9DE00AE78C1 /* spot.app */,
-				274E3C911C74B9DE00AE78C1 /* spotTests.xctest */,
-				274E3C9C1C74B9DE00AE78C1 /* spotUITests.xctest */,
+				273F991E1C77F72D002F1B9B /* spot.app */,
+				273F99361C77F72D002F1B9B /* spotTests.xctest */,
+				273F99411C77F72D002F1B9B /* spotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		274E3C7F1C74B9DE00AE78C1 /* spot */ = {
+		273F99201C77F72D002F1B9B /* spot */ = {
 			isa = PBXGroup;
 			children = (
-				274E3C801C74B9DE00AE78C1 /* AppDelegate.swift */,
-				274E3CB21C74BF9B00AE78C1 /* SpriteMod.swift */,
-				274E3CB81C74D04B00AE78C1 /* ProjectileMod.swift */,
-				274E3CB61C74C1D300AE78C1 /* MapWall.swift */,
-				274E3CB41C74C00100AE78C1 /* GameScene.swift */,
-				274E3C821C74B9DE00AE78C1 /* GameView.swift */,
-				274E3C841C74B9DE00AE78C1 /* Main.storyboard */,
-				274E3C871C74B9DE00AE78C1 /* Assets.xcassets */,
-				274E3C891C74B9DE00AE78C1 /* LaunchScreen.storyboard */,
-				274E3C8C1C74B9DE00AE78C1 /* Info.plist */,
+				273F99211C77F72D002F1B9B /* AppDelegate.swift */,
+				273F99231C77F72D002F1B9B /* GameScene.sks */,
+				273F99531C77F7EA002F1B9B /* MapWall.swift */,
+				273F99541C77F7EA002F1B9B /* ProjectileMod.swift */,
+				273F99551C77F7EA002F1B9B /* SpriteMod.swift */,
+				273F99251C77F72D002F1B9B /* GameScene.swift */,
+				273F99271C77F72D002F1B9B /* GameViewController.swift */,
+				273F99291C77F72D002F1B9B /* Main.storyboard */,
+				273F992C1C77F72D002F1B9B /* Assets.xcassets */,
+				273F992E1C77F72D002F1B9B /* LaunchScreen.storyboard */,
+				273F99311C77F72D002F1B9B /* Info.plist */,
 			);
 			path = spot;
 			sourceTree = "<group>";
 		};
-		274E3C941C74B9DE00AE78C1 /* spotTests */ = {
+		273F99391C77F72D002F1B9B /* spotTests */ = {
 			isa = PBXGroup;
 			children = (
-				274E3C951C74B9DE00AE78C1 /* spotTests.swift */,
-				274E3C971C74B9DE00AE78C1 /* Info.plist */,
+				273F993A1C77F72D002F1B9B /* spotTests.swift */,
+				273F993C1C77F72D002F1B9B /* Info.plist */,
 			);
 			path = spotTests;
 			sourceTree = "<group>";
 		};
-		274E3C9F1C74B9DE00AE78C1 /* spotUITests */ = {
+		273F99441C77F72D002F1B9B /* spotUITests */ = {
 			isa = PBXGroup;
 			children = (
-				274E3CA01C74B9DE00AE78C1 /* spotUITests.swift */,
-				274E3CA21C74B9DE00AE78C1 /* Info.plist */,
+				273F99451C77F72D002F1B9B /* spotUITests.swift */,
+				273F99471C77F72D002F1B9B /* Info.plist */,
 			);
 			path = spotUITests;
 			sourceTree = "<group>";
@@ -144,13 +143,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		274E3C7C1C74B9DE00AE78C1 /* spot */ = {
+		273F991D1C77F72D002F1B9B /* spot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 274E3CA51C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spot" */;
+			buildConfigurationList = 273F994A1C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spot" */;
 			buildPhases = (
-				274E3C791C74B9DE00AE78C1 /* Sources */,
-				274E3C7A1C74B9DE00AE78C1 /* Frameworks */,
-				274E3C7B1C74B9DE00AE78C1 /* Resources */,
+				273F991A1C77F72D002F1B9B /* Sources */,
+				273F991B1C77F72D002F1B9B /* Frameworks */,
+				273F991C1C77F72D002F1B9B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -158,69 +157,69 @@
 			);
 			name = spot;
 			productName = spot;
-			productReference = 274E3C7D1C74B9DE00AE78C1 /* spot.app */;
+			productReference = 273F991E1C77F72D002F1B9B /* spot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		274E3C901C74B9DE00AE78C1 /* spotTests */ = {
+		273F99351C77F72D002F1B9B /* spotTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 274E3CA81C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spotTests" */;
+			buildConfigurationList = 273F994D1C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spotTests" */;
 			buildPhases = (
-				274E3C8D1C74B9DE00AE78C1 /* Sources */,
-				274E3C8E1C74B9DE00AE78C1 /* Frameworks */,
-				274E3C8F1C74B9DE00AE78C1 /* Resources */,
+				273F99321C77F72D002F1B9B /* Sources */,
+				273F99331C77F72D002F1B9B /* Frameworks */,
+				273F99341C77F72D002F1B9B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				274E3C931C74B9DE00AE78C1 /* PBXTargetDependency */,
+				273F99381C77F72D002F1B9B /* PBXTargetDependency */,
 			);
 			name = spotTests;
 			productName = spotTests;
-			productReference = 274E3C911C74B9DE00AE78C1 /* spotTests.xctest */;
+			productReference = 273F99361C77F72D002F1B9B /* spotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		274E3C9B1C74B9DE00AE78C1 /* spotUITests */ = {
+		273F99401C77F72D002F1B9B /* spotUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 274E3CAB1C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spotUITests" */;
+			buildConfigurationList = 273F99501C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spotUITests" */;
 			buildPhases = (
-				274E3C981C74B9DE00AE78C1 /* Sources */,
-				274E3C991C74B9DE00AE78C1 /* Frameworks */,
-				274E3C9A1C74B9DE00AE78C1 /* Resources */,
+				273F993D1C77F72D002F1B9B /* Sources */,
+				273F993E1C77F72D002F1B9B /* Frameworks */,
+				273F993F1C77F72D002F1B9B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				274E3C9E1C74B9DE00AE78C1 /* PBXTargetDependency */,
+				273F99431C77F72D002F1B9B /* PBXTargetDependency */,
 			);
 			name = spotUITests;
 			productName = spotUITests;
-			productReference = 274E3C9C1C74B9DE00AE78C1 /* spotUITests.xctest */;
+			productReference = 273F99411C77F72D002F1B9B /* spotUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		274E3C751C74B9DE00AE78C1 /* Project object */ = {
+		273F99161C77F72C002F1B9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Kyle Zappitell";
 				TargetAttributes = {
-					274E3C7C1C74B9DE00AE78C1 = {
+					273F991D1C77F72D002F1B9B = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					274E3C901C74B9DE00AE78C1 = {
+					273F99351C77F72D002F1B9B = {
 						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 274E3C7C1C74B9DE00AE78C1;
+						TestTargetID = 273F991D1C77F72D002F1B9B;
 					};
-					274E3C9B1C74B9DE00AE78C1 = {
+					273F99401C77F72D002F1B9B = {
 						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 274E3C7C1C74B9DE00AE78C1;
+						TestTargetID = 273F991D1C77F72D002F1B9B;
 					};
 				};
 			};
-			buildConfigurationList = 274E3C781C74B9DE00AE78C1 /* Build configuration list for PBXProject "spot" */;
+			buildConfigurationList = 273F99191C77F72C002F1B9B /* Build configuration list for PBXProject "spot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,37 +227,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 274E3C741C74B9DE00AE78C1;
-			productRefGroup = 274E3C7E1C74B9DE00AE78C1 /* Products */;
+			mainGroup = 273F99151C77F72C002F1B9B;
+			productRefGroup = 273F991F1C77F72D002F1B9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				274E3C7C1C74B9DE00AE78C1 /* spot */,
-				274E3C901C74B9DE00AE78C1 /* spotTests */,
-				274E3C9B1C74B9DE00AE78C1 /* spotUITests */,
+				273F991D1C77F72D002F1B9B /* spot */,
+				273F99351C77F72D002F1B9B /* spotTests */,
+				273F99401C77F72D002F1B9B /* spotUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		274E3C7B1C74B9DE00AE78C1 /* Resources */ = {
+		273F991C1C77F72D002F1B9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274E3C8B1C74B9DE00AE78C1 /* LaunchScreen.storyboard in Resources */,
-				274E3C881C74B9DE00AE78C1 /* Assets.xcassets in Resources */,
-				274E3C861C74B9DE00AE78C1 /* Main.storyboard in Resources */,
+				273F99241C77F72D002F1B9B /* GameScene.sks in Resources */,
+				273F99301C77F72D002F1B9B /* LaunchScreen.storyboard in Resources */,
+				273F992D1C77F72D002F1B9B /* Assets.xcassets in Resources */,
+				273F992B1C77F72D002F1B9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274E3C8F1C74B9DE00AE78C1 /* Resources */ = {
+		273F99341C77F72D002F1B9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274E3C9A1C74B9DE00AE78C1 /* Resources */ = {
+		273F993F1C77F72D002F1B9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,63 +268,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		274E3C791C74B9DE00AE78C1 /* Sources */ = {
+		273F991A1C77F72D002F1B9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274E3CB71C74C1D300AE78C1 /* MapWall.swift in Sources */,
-				274E3C831C74B9DE00AE78C1 /* GameView.swift in Sources */,
-				274E3C811C74B9DE00AE78C1 /* AppDelegate.swift in Sources */,
-				274E3CB91C74D04B00AE78C1 /* ProjectileMod.swift in Sources */,
-				274E3CB51C74C00100AE78C1 /* GameScene.swift in Sources */,
-				274E3CB31C74BF9B00AE78C1 /* SpriteMod.swift in Sources */,
+				273F99261C77F72D002F1B9B /* GameScene.swift in Sources */,
+				273F99571C77F7EA002F1B9B /* ProjectileMod.swift in Sources */,
+				273F99281C77F72D002F1B9B /* GameViewController.swift in Sources */,
+				273F99561C77F7EA002F1B9B /* MapWall.swift in Sources */,
+				273F99221C77F72D002F1B9B /* AppDelegate.swift in Sources */,
+				273F99581C77F7EA002F1B9B /* SpriteMod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274E3C8D1C74B9DE00AE78C1 /* Sources */ = {
+		273F99321C77F72D002F1B9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274E3C961C74B9DE00AE78C1 /* spotTests.swift in Sources */,
+				273F993B1C77F72D002F1B9B /* spotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		274E3C981C74B9DE00AE78C1 /* Sources */ = {
+		273F993D1C77F72D002F1B9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274E3CA11C74B9DE00AE78C1 /* spotUITests.swift in Sources */,
+				273F99461C77F72D002F1B9B /* spotUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		274E3C931C74B9DE00AE78C1 /* PBXTargetDependency */ = {
+		273F99381C77F72D002F1B9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 274E3C7C1C74B9DE00AE78C1 /* spot */;
-			targetProxy = 274E3C921C74B9DE00AE78C1 /* PBXContainerItemProxy */;
+			target = 273F991D1C77F72D002F1B9B /* spot */;
+			targetProxy = 273F99371C77F72D002F1B9B /* PBXContainerItemProxy */;
 		};
-		274E3C9E1C74B9DE00AE78C1 /* PBXTargetDependency */ = {
+		273F99431C77F72D002F1B9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 274E3C7C1C74B9DE00AE78C1 /* spot */;
-			targetProxy = 274E3C9D1C74B9DE00AE78C1 /* PBXContainerItemProxy */;
+			target = 273F991D1C77F72D002F1B9B /* spot */;
+			targetProxy = 273F99421C77F72D002F1B9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		274E3C841C74B9DE00AE78C1 /* Main.storyboard */ = {
+		273F99291C77F72D002F1B9B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				274E3C851C74B9DE00AE78C1 /* Base */,
+				273F992A1C77F72D002F1B9B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		274E3C891C74B9DE00AE78C1 /* LaunchScreen.storyboard */ = {
+		273F992E1C77F72D002F1B9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				274E3C8A1C74B9DE00AE78C1 /* Base */,
+				273F992F1C77F72D002F1B9B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		274E3CA31C74B9DE00AE78C1 /* Debug */ = {
+		273F99481C77F72D002F1B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,7 +351,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		274E3CA41C74B9DE00AE78C1 /* Release */ = {
+		273F99491C77F72D002F1B9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -413,7 +413,7 @@
 			};
 			name = Release;
 		};
-		274E3CA61C74B9DE00AE78C1 /* Debug */ = {
+		273F994B1C77F72D002F1B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -424,7 +424,7 @@
 			};
 			name = Debug;
 		};
-		274E3CA71C74B9DE00AE78C1 /* Release */ = {
+		273F994C1C77F72D002F1B9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -435,10 +435,11 @@
 			};
 			name = Release;
 		};
-		274E3CA91C74B9DE00AE78C1 /* Debug */ = {
+		273F994E1C77F72D002F1B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = spotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.spotTests;
@@ -447,7 +448,7 @@
 			};
 			name = Debug;
 		};
-		274E3CAA1C74B9DE00AE78C1 /* Release */ = {
+		273F994F1C77F72D002F1B9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -459,9 +460,10 @@
 			};
 			name = Release;
 		};
-		274E3CAC1C74B9DE00AE78C1 /* Debug */ = {
+		273F99511C77F72D002F1B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = spotUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.spotUITests;
@@ -471,7 +473,7 @@
 			};
 			name = Debug;
 		};
-		274E3CAD1C74B9DE00AE78C1 /* Release */ = {
+		273F99521C77F72D002F1B9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = spotUITests/Info.plist;
@@ -486,43 +488,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		274E3C781C74B9DE00AE78C1 /* Build configuration list for PBXProject "spot" */ = {
+		273F99191C77F72C002F1B9B /* Build configuration list for PBXProject "spot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				274E3CA31C74B9DE00AE78C1 /* Debug */,
-				274E3CA41C74B9DE00AE78C1 /* Release */,
+				273F99481C77F72D002F1B9B /* Debug */,
+				273F99491C77F72D002F1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		274E3CA51C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spot" */ = {
+		273F994A1C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				274E3CA61C74B9DE00AE78C1 /* Debug */,
-				274E3CA71C74B9DE00AE78C1 /* Release */,
+				273F994B1C77F72D002F1B9B /* Debug */,
+				273F994C1C77F72D002F1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		274E3CA81C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spotTests" */ = {
+		273F994D1C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				274E3CA91C74B9DE00AE78C1 /* Debug */,
-				274E3CAA1C74B9DE00AE78C1 /* Release */,
+				273F994E1C77F72D002F1B9B /* Debug */,
+				273F994F1C77F72D002F1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		274E3CAB1C74B9DE00AE78C1 /* Build configuration list for PBXNativeTarget "spotUITests" */ = {
+		273F99501C77F72D002F1B9B /* Build configuration list for PBXNativeTarget "spotUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				274E3CAC1C74B9DE00AE78C1 /* Debug */,
-				274E3CAD1C74B9DE00AE78C1 /* Release */,
+				273F99511C77F72D002F1B9B /* Debug */,
+				273F99521C77F72D002F1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 274E3C751C74B9DE00AE78C1 /* Project object */;
+	rootObject = 273F99161C77F72C002F1B9B /* Project object */;
 }

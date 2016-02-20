@@ -2,7 +2,7 @@
 //  spotTests.swift
 //  spotTests
 //
-//  Created by Kyle Zappitell on 2/17/16.
+//  Created by Kyle Zappitell on 2/19/16.
 //  Copyright © 2016 Kyle Zappitell. All rights reserved.
 //
 

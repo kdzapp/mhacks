@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "274E3C7C1C74B9DE00AE78C1"
+               BlueprintIdentifier = "273F991D1C77F72D002F1B9B"
                BuildableName = "spot.app"
                BlueprintName = "spot"
                ReferencedContainer = "container:spot.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "274E3C901C74B9DE00AE78C1"
+               BlueprintIdentifier = "273F99351C77F72D002F1B9B"
                BuildableName = "spotTests.xctest"
                BlueprintName = "spotTests"
                ReferencedContainer = "container:spot.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "274E3C9B1C74B9DE00AE78C1"
+               BlueprintIdentifier = "273F99401C77F72D002F1B9B"
                BuildableName = "spotUITests.xctest"
                BlueprintName = "spotUITests"
                ReferencedContainer = "container:spot.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "274E3C7C1C74B9DE00AE78C1"
+            BlueprintIdentifier = "273F991D1C77F72D002F1B9B"
             BuildableName = "spot.app"
             BlueprintName = "spot"
             ReferencedContainer = "container:spot.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "274E3C7C1C74B9DE00AE78C1"
+            BlueprintIdentifier = "273F991D1C77F72D002F1B9B"
             BuildableName = "spot.app"
             BlueprintName = "spot"
             ReferencedContainer = "container:spot.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "274E3C7C1C74B9DE00AE78C1"
+            BlueprintIdentifier = "273F991D1C77F72D002F1B9B"
             BuildableName = "spot.app"
             BlueprintName = "spot"
             ReferencedContainer = "container:spot.xcodeproj">
