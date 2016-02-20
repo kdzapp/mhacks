@@ -27,6 +27,7 @@ class Sprite: SKSpriteNode{
     private var location: CGPoint
     var spriteTexture: SKTexture
     var spriteSize = CGSize(width: 100, height: 100)
+    var spritePhysics = SKPhysicsBody(circleOfRadius: 50)
     
     init(color: spriteColor) {
         
@@ -50,6 +51,11 @@ class Sprite: SKSpriteNode{
         }
         
         super.init(texture: spriteTexture, color: UIColor(), size: spriteSize)
+        
+        //Physics
+        spritePhysics.velocity = CGVector(dx: 2, dy: 2);
+        spritePhysics.dynamic = true
+        self.physicsBody = spritePhysics
         
     }
 
