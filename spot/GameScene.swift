@@ -11,7 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
     
-    let joystick = AnalogJoystick(diameters: (substrate: 100, stick: 50), colors: (substrate: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.7), stick: UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)), images: (nil))
+    let joystick = AnalogJoystick(diameters: (substrate: 130, stick: 70), colors: (substrate: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.7), stick: UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)), images: (nil))
     let player = Sprite(color: spriteColor.green)
     let enemy = Sprite(color: spriteColor.red)
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1);
