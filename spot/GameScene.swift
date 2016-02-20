@@ -96,6 +96,10 @@ func createMap() -> SKNode {
     viewer.addChild(wallSqr2)
     let wallH5 = Wall(width: 200, height: 50, xCord: 920, yCord: 260)
     viewer.addChild(wallH5)
+    let wallTopBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
+    viewer.addChild(wallTopBorder)
+    let wallBottomBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
+    viewer.addChild(wallBottomBorder)
     
     return viewer
 }
