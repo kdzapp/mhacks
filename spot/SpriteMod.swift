@@ -25,22 +25,30 @@ class Sprite: SKSpriteNode{
     private var ammo = 50;
     private var colorOfSprite: spriteColor
     private var location: CGPoint
-    
-    init(color: spriteColor, xCord: CGFloat, yCord: CGFloat) {
-        
-        colorOfSprite = color
-        location = CGPointMake(xCord, yCord)
-        
-        super.init(texture: SKTexture.init(imageNamed: "Sprite1"), color: UIColor.blackColor(), size: CGSize.init(width: 1, height: 1))
-        
-    }
+    var spriteTexture: SKTexture
     
     init(color: spriteColor) {
         
         colorOfSprite = color
         location = CGPoint()
         
-        super.init(texture: SKTexture.init(imageNamed: "Sprite1"), color: UIColor.blueColor(), size: CGSize.init(width: 100, height: 100))
+        //Load Sprite With Color
+        switch colorOfSprite {
+        case .blue:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite3")
+            break
+        case .red:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite2")
+            break
+        case .yellow:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite4")
+            break
+        case .green:
+            spriteTexture = SKTexture.init(imageNamed: "Sprite1")
+            break
+        }
+        
+        super.init(texture: spriteTexture, color: UIColor(), size: CGSize.init(width: 100, height: 100))
         
     }
 
