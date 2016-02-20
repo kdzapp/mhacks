@@ -18,7 +18,7 @@ enum spriteColor {
     case yellow
 }
 
-class Sprite {
+class Sprite: SKSpriteNode{
     
     //------Member Properties-----//
     
@@ -38,6 +38,10 @@ class Sprite {
         colorOfSprite = color
         location = CGPoint()
         
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //------Member Functions-------//

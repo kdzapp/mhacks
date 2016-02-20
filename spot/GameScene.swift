@@ -9,6 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -37,6 +38,14 @@ class GameScene: SKScene {
             
             self.addChild(sprite)
         }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        <#code#>
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        <#code#>
     }
    
     override func update(currentTime: CFTimeInterval) {

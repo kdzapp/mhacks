@@ -7,29 +7,12 @@
 //
 
 import Foundation
+import SpriteKit
 
+class Wall: SKSpriteNode {
 
-struct size {
-    
-    var length = 0;
-    var width = 0;
-}
-
-class Wall {
-    
-    var wallsize = size();
-    
-    func getLength() -> Int {
-        return wallsize.length;
-    }
-    
-    func getWidth() -> Int {
-        return wallsize.width;
-    }
-    
-    init(length: Int, width: Int) {
-        wallsize.length = length;
-        wallsize.width = width;
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
