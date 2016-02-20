@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C4spot18GameViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
+- "supportedInterfaceOrientations"
 - "viewDidLoad"
 - "prefersStatusBarHidden"
-- "supportedInterfaceOrientations"
+- "didReceiveMemoryWarning"
 - "shouldAutorotate"
 depends-top-level:
-- "Bool"
-- "GameViewController"
 - !private "StringLiteralType"
-- !private "=="
-- "UIViewController"
-- !private "BooleanLiteralType"
-- !private "SKView"
-- !private "GameScene"
 - !private "UIDevice"
+- !private "GameScene"
+- "UIViewController"
 - "UIInterfaceOrientationMask"
+- !private "SKView"
+- !private "=="
+- !private "BooleanLiteralType"
+- "GameViewController"
+- "Bool"
 depends-member:
 - !private ["PSs9AnyObject", "GameScene"]
 - !private ["PSs9AnyObject", "UIDevice"]

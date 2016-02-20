@@ -7,32 +7,76 @@ provides-member:
 - ["C4spot10Projectile", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Sprite"
-- "spriteColor"
+- !private "StringLiteralType"
 - "CGPoint"
+- "Sprite"
+- "NSCoder"
 - "Projectile"
+- "spriteColor"
+- !private "fatalError"
 depends-member:
 - !private ["PSs9AnyObject", "colorOfProjectile"]
+- !private ["PSs9AnyObject", "fatalError"]
 - !private ["PSs9AnyObject", "getColor"]
 - !private ["PSs9AnyObject", "getLocation"]
 - !private ["PSs9AnyObject", "location"]
 - !private ["PSs9AnyObject", "touchLocation"]
 - ["PSs9AnyObject", ""]
+- !private ["PSs11CVarArgType", "getColor"]
+- !private ["PSs11CVarArgType", "getLocation"]
+- !private ["PSs23CustomStringConvertible", "getColor"]
+- !private ["PSs23CustomStringConvertible", "getLocation"]
+- !private ["PSs9Equatable", "getColor"]
+- !private ["PSs9Equatable", "getLocation"]
+- !private ["PSs8Hashable", "getColor"]
+- !private ["PSs8Hashable", "getLocation"]
+- !private ["PSo8NSCoding", "getColor"]
+- !private ["PSo8NSCoding", "getLocation"]
+- !private ["PSo9NSCopying", "getColor"]
+- !private ["PSo9NSCopying", "getLocation"]
+- !private ["CSo8NSObject", "getColor"]
+- !private ["CSo8NSObject", "getLocation"]
+- !private ["PSo16NSObjectProtocol", "getColor"]
+- !private ["PSo16NSObjectProtocol", "getLocation"]
 - ["C4spot10Projectile", "CGPoint"]
+- ["C4spot10Projectile", "NSCoder"]
 - ["C4spot10Projectile", "Sprite"]
 - !private ["C4spot10Projectile", "colorOfProjectile"]
 - ["C4spot10Projectile", "deinit"]
+- !private ["C4spot10Projectile", "fatalError"]
 - ["C4spot10Projectile", "init"]
 - !private ["C4spot10Projectile", "location"]
 - ["C4spot10Projectile", "spriteColor"]
 - !private ["C4spot10Projectile", "touchLocation"]
 - ["C4spot10Projectile", "updateLocation"]
+- !private ["CSo6SKNode", "getColor"]
+- !private ["CSo6SKNode", "getLocation"]
+- !private ["CSo12SKSpriteNode", "getColor"]
+- !private ["CSo12SKSpriteNode", "getLocation"]
 - !private ["C4spot6Sprite", "getColor"]
 - !private ["C4spot6Sprite", "getLocation"]
+- !private ["VSs12StaticString", "deinit"]
+- !private ["CSo11UIResponder", "getColor"]
+- !private ["CSo11UIResponder", "getLocation"]
+- !private ["PSs12_Reflectable", "getColor"]
+- !private ["PSs12_Reflectable", "getLocation"]
 depends-nominal:
 - "PSs9AnyObject"
+- !private "PSs11CVarArgType"
+- !private "PSs23CustomStringConvertible"
+- !private "PSs9Equatable"
+- !private "PSs8Hashable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
 - "C4spot10Projectile"
+- !private "CSo6SKNode"
+- !private "CSo12SKSpriteNode"
 - !private "C4spot6Sprite"
+- !private "VSs12StaticString"
+- !private "CSo11UIResponder"
+- !private "PSs12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -46,4 +90,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "12ed39d833b8e26bb489db840f8c99eb"
+interface-hash: "fc6d0b679c32dbdfbeb937b632abd8eb"

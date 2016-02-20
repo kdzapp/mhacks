@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C4spot11AppDelegate", ""]
 provides-dynamic-lookup:
+- "applicationWillResignActive"
+- "applicationWillTerminate"
 - "applicationDidEnterBackground"
 - "application"
 - "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
 - "window"
-- "applicationWillTerminate"
-- "applicationWillResignActive"
+- "applicationDidBecomeActive"
 depends-top-level:
-- "UIApplication"
-- "UIWindow"
-- !private "BooleanLiteralType"
-- "AnyObject"
-- "NSObject"
-- "Bool"
-- "UIApplicationDelegate"
-- "UIResponder"
 - "AppDelegate"
+- "NSObject"
+- "UIWindow"
+- "UIResponder"
+- "AnyObject"
+- "UIApplication"
+- "Bool"
+- !private "BooleanLiteralType"
+- "UIApplicationDelegate"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]

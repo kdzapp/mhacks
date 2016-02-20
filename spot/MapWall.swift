@@ -9,7 +9,20 @@
 import Foundation
 import SpriteKit
 
-class Wall {
-
+class Wall: SKSpriteNode {
+    private var location: CGPoint
+    
+    init(var color: UIColor, xCord: CGFloat, yCord: CGFloat) {
+        
+        color = UIColor.blackColor()
+        location = CGPointMake(xCord, yCord)
+        
+        super.init(texture: SKTexture.init(), color: UIColor.blackColor(), size: CGSize.init(width: 60, height: 120))
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }

@@ -1,20 +1,20 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "MapWall"
+- "Wall"
 provides-nominal:
-- "C4spot7MapWall"
+- "C4spot4Wall"
 provides-member:
-- ["C4spot7MapWall", ""]
+- ["C4spot4Wall", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "MapWall"
+- "Wall"
 depends-member:
 - ["PSs9AnyObject", ""]
-- ["C4spot7MapWall", "deinit"]
-- ["C4spot7MapWall", "init"]
+- ["C4spot4Wall", "deinit"]
+- ["C4spot4Wall", "init"]
 depends-nominal:
 - "PSs9AnyObject"
-- "C4spot7MapWall"
+- "C4spot4Wall"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -28,4 +28,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "49a5dead156fdbf2e0eee35b60bc7f64"
+interface-hash: "c13c7e0e6653c31302f06648c3075cfd"

@@ -138,4 +138,18 @@ SWIFT_CLASS("_TtC4spot18GameViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class SKTexture;
+
+SWIFT_CLASS("_TtC4spot6Sprite")
+@interface Sprite : SKSpriteNode
+@property (nonatomic, strong) SKTexture * __nonnull spriteTexture;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)setLocationLeft;
+- (void)setLocationRight;
+- (void)updateLocation:(CGPoint)location;
+- (void)shoot;
+- (CGPoint)getLocation;
+- (NSInteger)getAmmo;
+@end
+
 #pragma clang diagnostic pop
