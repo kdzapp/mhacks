@@ -31,11 +31,9 @@ class GameScene: SKScene {
         //Physical Boarder
         let gamePhysics = SKPhysicsBody(edgeLoopFromRect: self.frame)
         self.physicsBody = gamePhysics
-        
-        let wall = Wall(width: 60, height: 120, xCord: 1, yCord: 1)
-        wall.position = view.center
-        
-        self.addChild(wall)
+
+        //Create Map
+        self.addChild(createMap())
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -70,4 +68,34 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+}
+
+//Create Maop Function
+
+func createMap() -> SKNode {
+    
+    let viewer = SKNode()
+    
+    let wallH = Wall(width: 160, height: 50, xCord: 68, yCord: 460)
+    viewer.addChild(wallH)
+    let wallSqr = Wall(width: 150, height: 150, xCord: 200, yCord: 265)
+    viewer.addChild(wallSqr)
+    let wallV = Wall(width: 50, height: 345, xCord: 300, yCord: 615)
+    viewer.addChild(wallV)
+    let wallH2 = Wall(width: 200, height: 50, xCord: 375, yCord: 460)
+    viewer.addChild(wallH2)
+    let wallH3 = Wall(width: 200, height: 50, xCord: 540, yCord: 220)
+    viewer.addChild(wallH3)
+    let wallV2 = Wall(width: 50, height: 200, xCord: 500, yCord: 450)
+    viewer.addChild(wallV2)
+    let wallV3 = Wall(width: 50, height: 150, xCord: 650, yCord: 170)
+    viewer.addChild(wallV3)
+    let wallH4 = Wall(width: 200, height: 50, xCord: 755, yCord: 450)
+    viewer.addChild(wallH4)
+    let wallSqr2 = Wall(width: 150, height: 150, xCord: 850, yCord: 500)
+    viewer.addChild(wallSqr2)
+    let wallH5 = Wall(width: 200, height: 50, xCord: 920, yCord: 260)
+    viewer.addChild(wallH5)
+    
+    return viewer
 }
