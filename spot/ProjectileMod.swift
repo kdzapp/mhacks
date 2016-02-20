@@ -9,26 +9,28 @@
 import Foundation
 import SpriteKit
 
-class Projectile {
+class Projectile: SKSpriteNode {
     
     private var colorOfProjectile: spriteColor;
-    private var location: CGPoint;
-    private var touchLocation: CGPoint;
+    let projectilePhysics = SKPhysicsBody(circleOfRadius: 8)
     
-    init (sprite: Sprite, touch: CGPoint) {
+    init (sprite: Sprite) {
         
         colorOfProjectile = sprite.getColor();
-        self.location = sprite.getLocation();
-        touchLocation = touch;
         
+        super.init(texture: sprite.getTexture(), color: UIColor(), size: CGSize(width: 20, height: 20))
+        
+        projectilePhysics.dynamic = true
+        projectilePhysics.affectedByGravity = false
+        self.physicsBody = projectilePhysics
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateLocation() {
-        //location.x
-        //location.y
+    func setVelocity(dy: CGFloat, dx: CGFloat) {
+        projectilePhysics.velocity = CGVector(dx: dx*(0.5), dy: dy*(0.5))
     }
+    
 }

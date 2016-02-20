@@ -24,15 +24,13 @@ class Sprite: SKSpriteNode{
     
     private var ammo = 50;
     private var colorOfSprite: spriteColor
-    private var location: CGPoint
     var spriteTexture: SKTexture
     var spriteSize = CGSize(width: 100, height: 100)
-    var spritePhysics = SKPhysicsBody(circleOfRadius: 50)
+    var spritePhysics = SKPhysicsBody(circleOfRadius: 40)
     
     init(color: spriteColor) {
         
         colorOfSprite = color
-        location = CGPoint()
         
         //Load Sprite With Color
         switch colorOfSprite {
@@ -53,10 +51,10 @@ class Sprite: SKSpriteNode{
         super.init(texture: spriteTexture, color: UIColor(), size: spriteSize)
         
         //Physics
-        spritePhysics.velocity = CGVector(dx: 2, dy: 2);
+        spritePhysics.affectedByGravity = false;
         spritePhysics.dynamic = true
         self.physicsBody = spritePhysics
-        
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -70,18 +68,15 @@ class Sprite: SKSpriteNode{
     }
     
     func setLocationLeft() {
-        //location = CGPointMake()
-        //Will set to default location top left of screen
+        self.position = CGPointMake(70, 605)
     }
     
     func setLocationRight() {
-        //location = CGPointMake()
-        //Will set to default location top right of the screen
+        self.position = CGPointMake(950, 170)
     }
     
     func updateLocation(location: CGPoint) {
-        
-        self.location = location;
+        self.position = location;
     }
     
     func shoot () {
@@ -91,7 +86,7 @@ class Sprite: SKSpriteNode{
     //-----Get Functions------//
     
     func getLocation() -> CGPoint {
-        return location;
+        return self.position;
     }
     
     func getAmmo() -> Int {
@@ -100,6 +95,10 @@ class Sprite: SKSpriteNode{
     
     func getColor() -> spriteColor {
         return colorOfSprite;
+    }
+    
+    func getTexture() -> SKTexture {
+        return spriteTexture
     }
     
 }
