@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Projectile: SKSpriteNode {
+class Projectile {
     
     private var colorOfProjectile: spriteColor;
     private var location: CGPoint;
@@ -22,7 +22,7 @@ class Projectile: SKSpriteNode {
         touchLocation = touch;
         
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

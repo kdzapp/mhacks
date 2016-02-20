@@ -31,12 +31,16 @@ class Sprite: SKSpriteNode{
         colorOfSprite = color
         location = CGPointMake(xCord, yCord)
         
+        super.init(texture: SKTexture.init(imageNamed: "Sprite1"), color: UIColor.blackColor(), size: CGSize.init(width: 1, height: 1))
+        
     }
     
     init(color: spriteColor) {
         
         colorOfSprite = color
         location = CGPoint()
+        
+        super.init(texture: SKTexture.init(imageNamed: "Sprite1"), color: UIColor.blueColor(), size: CGSize.init(width: 100, height: 100))
         
     }
 

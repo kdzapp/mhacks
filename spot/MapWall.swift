@@ -9,10 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Wall: SKSpriteNode {
+class Wall {
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
 }
