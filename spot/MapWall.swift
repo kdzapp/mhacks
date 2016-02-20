@@ -11,18 +11,28 @@ import SpriteKit
 
 class Wall: SKSpriteNode {
     private var location: CGPoint
+    private var wallColor = UIColor.blackColor()
+    private var wallSize = CGSize()
     
-    init(var color: UIColor, xCord: CGFloat, yCord: CGFloat) {
+    init(width: CGFloat, height: CGFloat, xCord: CGFloat, yCord: CGFloat) {
+        wallSize.width = width
+        wallSize.height = height
         
-        color = UIColor.blackColor()
         location = CGPointMake(xCord, yCord)
-        
-        super.init(texture: SKTexture.init(), color: UIColor.blackColor(), size: CGSize.init(width: 60, height: 120))
+        super.init(texture: nil, color: wallColor, size: wallSize)
         
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getWidth() -> CGFloat {
+        return wallSize.width;
+    }
+    
+    func getHeight() -> CGFloat {
+        return wallSize.height;
     }
     
 }
