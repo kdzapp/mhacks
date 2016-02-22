@@ -9,6 +9,8 @@
 import Foundation
 import SpriteKit
 
+let mapHitCategory: UInt32 = 3
+
 class Wall: SKSpriteNode {
     private var location: CGPoint
     private var wallColor = UIColor.whiteColor()
@@ -27,7 +29,11 @@ class Wall: SKSpriteNode {
         
         //Physics
         wallPhysics.dynamic = false
+        wallPhysics.categoryBitMask = mapHitCategory
+        wallPhysics.contactTestBitMask = projectileHitCategory
+        wallPhysics.collisionBitMask = projectileHitCategory
         self.physicsBody = wallPhysics
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

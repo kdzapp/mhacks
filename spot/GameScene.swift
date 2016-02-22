@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     let joystick = AnalogJoystick(diameters: (substrate: 130, stick: 70), colors: (substrate: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.7), stick: UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)), images: (nil))
@@ -43,6 +43,8 @@ class GameScene: SKScene {
         //Create Map
         self.addChild(createMap())
         self.addChild(joystick)
+        //Delegate Contact
+        physicsWorld.contactDelegate = self
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -59,22 +61,49 @@ class GameScene: SKScene {
             
         self.addChild(projectile)
         
-        //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-        //sprite.runAction(SKAction.repeatActionForever(action)
-        
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    //Collision Function
+    func didBeginContact(contact: SKPhysicsContact) {
         
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        for child in self.children as [SKNode] {
-//            if(child.name == "joystick")
-//            {
-//                self.removeChildrenInArray([child])
-//            }
-//        }
+        //Projectile will be Body2 when hitting wall
+        let body1 = contact.bodyA
+        let body2 = contact.bodyB
+        
+        if(body1.categoryBitMask == mapHitCategory && body2.categoryBitMask == projectileHitCategory)
+        {
+            if let projectile = body2.node as! Projectile?
+            {
+                if(projectile.getBounce() != 0) {
+                    projectile.decBounce()
+                }
+                else {
+                    projectile.removeFromParent()
+                }
+            }
+        }
+        else if(body1.categoryBitMask == spriteHitCategory && body2.categoryBitMask == projectileHitCategory)
+        {
+            let sprite = body1.node as! Sprite
+            let projectile = body2.node as! Projectile
+            //If the projectile is NOT from the Sprite who made it...
+            if(sprite.getColor() != projectile.getColor()) {
+                
+                projectile.removeFromParent()
+                sprite.hit()
+                
+                if(sprite.getLife() == 0)
+                {
+                    print("Game Over")
+                    sprite.removeFromParent()
+                }
+            }
+        }
+        //If a projectile hits another projectile
+        else if(body1.categoryBitMask == projectileHitCategory && body2.categoryBitMask == projectileHitCategory) {
+            body1.node?.removeFromParent()
+            body2.node?.removeFromParent()
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {

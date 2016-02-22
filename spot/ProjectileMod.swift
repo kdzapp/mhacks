@@ -9,9 +9,12 @@
 import Foundation
 import SpriteKit
 
+let projectileHitCategory: UInt32 = 1
+
 class Projectile: SKSpriteNode {
     
-    private var colorOfProjectile: spriteColor;
+    private var colorOfProjectile: spriteColor
+    private var bounce = 1
     let projectilePhysics = SKPhysicsBody(circleOfRadius: 8)
     
     init (sprite: Sprite) {
@@ -22,6 +25,10 @@ class Projectile: SKSpriteNode {
         
         projectilePhysics.dynamic = true
         projectilePhysics.affectedByGravity = false
+        
+        projectilePhysics.categoryBitMask = projectileHitCategory
+        projectilePhysics.contactTestBitMask = mapHitCategory
+        projectilePhysics.collisionBitMask = mapHitCategory
         self.physicsBody = projectilePhysics
     }
     
@@ -29,8 +36,25 @@ class Projectile: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /*-----------Setters----------*/
+    
     func setVelocity(dy: CGFloat, dx: CGFloat) {
-        projectilePhysics.velocity = CGVector(dx: dx, dy: dy)
+        
+        projectilePhysics.velocity = CGVector(dx: dx*3, dy: dy*3)
+    }
+    
+    func decBounce() {
+        bounce--;
+    }
+    
+    /*-----------Getters----------*/
+    
+    func getColor() -> spriteColor {
+        return colorOfProjectile
+    }
+    
+    func getBounce() -> Int {
+        return bounce
     }
     
 }

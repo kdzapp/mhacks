@@ -9,6 +9,8 @@
 import Foundation
 import SpriteKit
 
+let spriteHitCategory: UInt32 = 0
+
 //------Enums-------//
 
 enum spriteColor {
@@ -24,6 +26,7 @@ class Sprite: SKSpriteNode{
     
     private var ammo = 50;
     private var colorOfSprite: spriteColor
+    private var life = 3;
     var spriteTexture: SKTexture
     var spriteSize = CGSize(width: 100, height: 100)
     var spritePhysics = SKPhysicsBody(circleOfRadius: 40)
@@ -55,6 +58,10 @@ class Sprite: SKSpriteNode{
         //Physics
         spritePhysics.affectedByGravity = false;
         spritePhysics.dynamic = true
+        
+        spritePhysics.categoryBitMask = spriteHitCategory
+        spritePhysics.contactTestBitMask = projectileHitCategory
+        spritePhysics.collisionBitMask = projectileHitCategory
         self.physicsBody = spritePhysics
 
     }
@@ -103,6 +110,10 @@ class Sprite: SKSpriteNode{
         ammo--
     }
     
+    func hit() {
+        life--
+    }
+    
     //-----Get Functions------//
     
     func getLocation() -> CGPoint {
@@ -119,6 +130,10 @@ class Sprite: SKSpriteNode{
     
     func getTexture() -> SKTexture {
         return spriteTexture
+    }
+    
+    func getLife() -> Int {
+        return life;
     }
     
 }

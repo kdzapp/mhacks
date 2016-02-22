@@ -8,95 +8,106 @@
 
 import SpriteKit
 
-//Create Map Functions
+//Create Map Function
 
 func createMap() -> SKNode {
     
-    let viewer = SKNode()
+    //Map 1
+    
+    let viewer1 = SKNode()
     
     let wallH = Wall(width: 160, height: 50, xCord: 68, yCord: 460)
-    viewer.addChild(wallH)
+    viewer1.addChild(wallH)
     let wallSqr = Wall(width: 150, height: 150, xCord: 200, yCord: 265)
-    viewer.addChild(wallSqr)
+    viewer1.addChild(wallSqr)
     let wallV = Wall(width: 50, height: 345, xCord: 300, yCord: 615)
-    viewer.addChild(wallV)
+    viewer1.addChild(wallV)
     let wallH2 = Wall(width: 200, height: 50, xCord: 375, yCord: 460)
-    viewer.addChild(wallH2)
+    viewer1.addChild(wallH2)
     let wallH3 = Wall(width: 200, height: 50, xCord: 540, yCord: 220)
-    viewer.addChild(wallH3)
+    viewer1.addChild(wallH3)
     let wallV2 = Wall(width: 50, height: 200, xCord: 500, yCord: 450)
-    viewer.addChild(wallV2)
+    viewer1.addChild(wallV2)
     let wallV3 = Wall(width: 50, height: 150, xCord: 650, yCord: 170)
-    viewer.addChild(wallV3)
+    viewer1.addChild(wallV3)
     let wallH4 = Wall(width: 200, height: 50, xCord: 755, yCord: 450)
-    viewer.addChild(wallH4)
+    viewer1.addChild(wallH4)
     let wallSqr2 = Wall(width: 150, height: 150, xCord: 850, yCord: 500)
-    viewer.addChild(wallSqr2)
+    viewer1.addChild(wallSqr2)
     let wallH5 = Wall(width: 200, height: 50, xCord: 920, yCord: 260)
-    viewer.addChild(wallH5)
+    viewer1.addChild(wallH5)
     let wallTopBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
-    viewer.addChild(wallTopBorder)
+    viewer1.addChild(wallTopBorder)
     let wallBottomBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
-    viewer.addChild(wallBottomBorder)
+    viewer1.addChild(wallBottomBorder)
     
-    return viewer
-}
-
-func createMap2() -> SKNode {
-    let viewer = SKNode()
+    //Map 2
+    
+    let viewer2 = SKNode()
     
     let wallSqr0 = Wall(width: 150, height: 150, xCord: 200, yCord: 510)
-    viewer.addChild(wallSqr0)
+    viewer2.addChild(wallSqr0)
     let wallSqr1 = Wall(width: 150, height: 150, xCord: 500, yCord: 510)
-    viewer.addChild(wallSqr1)
-    let wallSqr2 = Wall(width: 150, height: 150, xCord: 800, yCord: 510)
-    viewer.addChild(wallSqr2)
+    viewer2.addChild(wallSqr1)
+    let wallSqr22 = Wall(width: 150, height: 150, xCord: 800, yCord: 510)
+    viewer2.addChild(wallSqr22)
     let wallSqr3 = Wall(width: 150, height: 150, xCord: 200, yCord: 260)
-    viewer.addChild(wallSqr3)
+    viewer2.addChild(wallSqr3)
     let wallSqr4 = Wall(width: 150, height: 150, xCord: 500, yCord: 260)
-    viewer.addChild(wallSqr4)
+    viewer2.addChild(wallSqr4)
     let wallSqr5 = Wall(width: 150, height: 150, xCord: 800, yCord: 260)
-    viewer.addChild(wallSqr5)
-    let wallTopBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
-    viewer.addChild(wallTopBorder)
-    let wallBottomBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
-    viewer.addChild(wallBottomBorder)
+    viewer2.addChild(wallSqr5)
+    let wallTopBorder2 = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
+    viewer2.addChild(wallTopBorder2)
+    let wallBottomBorder2 = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
+    viewer2.addChild(wallBottomBorder2)
     
-    return viewer
-}
-
-func createMap3() -> SKNode {
-    let viewer = SKNode()
+    //Map 3
+    
+    let viewer3 = SKNode()
     let angle: CGFloat = CGFloat(M_PI)
     let rotate = SKAction.rotateByAngle(angle, duration: 2)
     let repeateAction = SKAction.repeatActionForever(rotate)
     
     let wallTopLeft = Wall(width: 180, height: 20, xCord: 205, yCord: 520)
     wallTopLeft.zRotation = 0.78
-    viewer.addChild(wallTopLeft)
+    viewer3.addChild(wallTopLeft)
     let wallBottomLeft = Wall(width: 180, height: 20, xCord: 205, yCord: 245)
     wallBottomLeft.zRotation = -0.78
-    viewer.addChild(wallBottomLeft)
+    viewer3.addChild(wallBottomLeft)
     let wallTopRight = Wall(width: 180, height: 20, xCord: 800, yCord: 520)
     wallTopRight.zRotation = -0.78
-    viewer.addChild(wallTopRight)
+    viewer3.addChild(wallTopRight)
     let wallBottomRight = Wall(width: 180, height: 20, xCord: 800, yCord: 245)
     wallBottomRight.zRotation = 0.78
-    viewer.addChild(wallBottomRight)
-    let wallSqr = Wall(width: 120, height: 120, xCord: 500, yCord: 380)
+    viewer3.addChild(wallBottomRight)
+    let wallSqr33 = Wall(width: 120, height: 120, xCord: 500, yCord: 380)
     wallSqr.runAction(repeateAction, withKey: "rotate")
-    viewer.addChild(wallSqr)
-    let wallTopBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
-    viewer.addChild(wallTopBorder)
-    let wallBottomBorder = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
-    viewer.addChild(wallBottomBorder)
+    viewer3.addChild(wallSqr33)
+    let wallTopBorder3 = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
+    viewer3.addChild(wallTopBorder3)
+    let wallBottomBorder3 = Wall(width: 1100, height: 10, xCord: 500, yCord: 89)
+    viewer3.addChild(wallBottomBorder3)
     
     //let changeColorAction = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 0.08, duration: 1.5)
     // wallSqr.runAction(changeColorAction) {
     //     wallSqr.wallColor = UIColor.redColor()
     //}
     
-    return viewer
+    let rand = random() % 3
+    
+    print(rand)
+    
+    switch rand {
+    case 1:
+        return viewer1
+    case 2:
+        return viewer2
+    case 3:
+        return viewer3
+    default:
+        return viewer1
+    }
 }
 
 /*func createMap4() -> SKNode {
