@@ -24,6 +24,7 @@
 		27844D231C7858D1001A31BB /* StartGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27844D221C7858D1001A31BB /* StartGameScene.swift */; };
 		27844D251C785DEB001A31BB /* StartGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27844D241C785DEB001A31BB /* StartGameScene.sks */; };
 		27844D271C785E22001A31BB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27844D261C785E22001A31BB /* GameScene.sks */; };
+		27D37A2C1C7B5D35009CBDBE /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D37A2B1C7B5D35009CBDBE /* Maps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 /* Begin PBXFileReference section */
 		2729681D1C78675000D31EB6 /* PlayerSelectGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSelectGameScene.swift; sourceTree = "<group>"; };
 		272968231C786A9A00D31EB6 /* PlayerSelectGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerSelectGameScene.sks; sourceTree = "<group>"; };
-		273F991E1C77F72D002F1B9B /* spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273F991E1C77F72D002F1B9B /* Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273F99211C77F72D002F1B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		273F99251C77F72D002F1B9B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		273F99271C77F72D002F1B9B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		27844D221C7858D1001A31BB /* StartGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameScene.swift; sourceTree = "<group>"; };
 		27844D241C785DEB001A31BB /* StartGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartGameScene.sks; sourceTree = "<group>"; };
 		27844D261C785E22001A31BB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		27D37A2B1C7B5D35009CBDBE /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 		273F991F1C77F72D002F1B9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				273F991E1C77F72D002F1B9B /* spot.app */,
+				273F991E1C77F72D002F1B9B /* Spot.app */,
 				273F99361C77F72D002F1B9B /* spotTests.xctest */,
 				273F99411C77F72D002F1B9B /* spotUITests.xctest */,
 			);
@@ -123,6 +125,7 @@
 				273F99541C77F7EA002F1B9B /* ProjectileMod.swift */,
 				273F99551C77F7EA002F1B9B /* SpriteMod.swift */,
 				273F99251C77F72D002F1B9B /* GameScene.swift */,
+				27D37A2B1C7B5D35009CBDBE /* Maps.swift */,
 				27844D221C7858D1001A31BB /* StartGameScene.swift */,
 				2729681D1C78675000D31EB6 /* PlayerSelectGameScene.swift */,
 				273F99271C77F72D002F1B9B /* GameViewController.swift */,
@@ -180,7 +183,7 @@
 			);
 			name = spot;
 			productName = spot;
-			productReference = 273F991E1C77F72D002F1B9B /* spot.app */;
+			productReference = 273F991E1C77F72D002F1B9B /* Spot.app */;
 			productType = "com.apple.product-type.application";
 		};
 		273F99351C77F72D002F1B9B /* spotTests */ = {
@@ -302,6 +305,7 @@
 				276479AA1C7879090038C48C /* AnalogJoystick.swift in Sources */,
 				273F99571C77F7EA002F1B9B /* ProjectileMod.swift in Sources */,
 				273F99281C77F72D002F1B9B /* GameViewController.swift in Sources */,
+				27D37A2C1C7B5D35009CBDBE /* Maps.swift in Sources */,
 				2729681E1C78675000D31EB6 /* PlayerSelectGameScene.swift in Sources */,
 				273F99561C77F7EA002F1B9B /* MapWall.swift in Sources */,
 				27844D231C7858D1001A31BB /* StartGameScene.swift in Sources */,
@@ -450,7 +454,7 @@
 				INFOPLIST_FILE = spot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.spot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Spot;
 			};
 			name = Debug;
 		};
@@ -462,7 +466,7 @@
 				INFOPLIST_FILE = spot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.spot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Spot;
 			};
 			name = Release;
 		};

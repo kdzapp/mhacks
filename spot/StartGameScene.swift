@@ -40,6 +40,7 @@ class StartGameScene: SKScene {
                     let playGameScene = PlayerSelectGameScene(fileNamed: "PlayerSelectGameScene")
                     let transition = SKTransition()
                     
+                    
                     playGameScene!.scaleMode = .AspectFill
                     
                     self.view?.presentScene(playGameScene!, transition: transition)
