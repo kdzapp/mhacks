@@ -84,25 +84,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         else if(body1.categoryBitMask == spriteHitCategory && body2.categoryBitMask == projectileHitCategory)
         {
-            let sprite = body1.node as! Sprite
-            let projectile = body2.node as! Projectile
+            let sprite = body1.node as! Sprite?
+            let projectile = body2.node as! Projectile?
+            if (sprite != nil && projectile != nil)  {
             //If the projectile is NOT from the Sprite who made it...
-            if(sprite.getColor() != projectile.getColor()) {
+                if(sprite!.getColor() != projectile!.getColor()) {
                 
-                projectile.removeFromParent()
-                sprite.hit()
+                    projectile!.removeFromParent()
+                    sprite!.hit()
                 
-                if(sprite.getLife() == 0)
-                {
-                    print("Game Over")
-                    sprite.removeFromParent()
+                    if(sprite!.getLife() == 0)
+                    {
+                        print("Game Over")
+                        sprite!.removeFromParent()
+                    }
                 }
             }
         }
         //If a projectile hits another projectile
         else if(body1.categoryBitMask == projectileHitCategory && body2.categoryBitMask == projectileHitCategory) {
-            body1.node?.removeFromParent()
-            body2.node?.removeFromParent()
+            if let _ = body1.node {
+                removeFromParent()
+            }
+            if let _ = body2.node {
+                removeFromParent()
+            }
         }
     }
    
