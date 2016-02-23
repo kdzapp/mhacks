@@ -11,6 +11,7 @@ import SpriteKit
 class StartGameScene: SKScene {
     
     var gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
+    let playButton = SKSpriteNode(texture: SKTexture(imageNamed: "play"), color: UIColor(), size: CGSize(width: 200, height: 200))
     
     override func didMoveToView(view: SKView) {
         //Background Color
@@ -20,8 +21,7 @@ class StartGameScene: SKScene {
         let headerText = SKSpriteNode(imageNamed: "header")
         headerText.size = CGSize(width: 744, height: 297)
         headerText.position = CGPoint(x: 500,y: 490)
-        
-        let playButton = SKSpriteNode(texture: SKTexture(imageNamed: "play"), color: UIColor(), size: CGSize(width: 200, height: 200))
+    
         playButton.position = CGPoint(x: 500,y: 230)
         playButton.name = "play";
         
@@ -38,11 +38,7 @@ class StartGameScene: SKScene {
                 
                 if(node.name == "play") {
                     let playGameScene = PlayerSelectGameScene(fileNamed: "PlayerSelectGameScene")
-                    let transition = SKTransition.crossFadeWithDuration(2)
-                    
-                    
-                    let action = SKAction.scaleBy(20, duration: 0.5)
-                    node.runAction(action)
+                    let transition = SKTransition.crossFadeWithDuration(1)
                     
                     playGameScene!.scaleMode = .AspectFill
                     self.view?.presentScene(playGameScene!, transition: transition)
@@ -52,6 +48,6 @@ class StartGameScene: SKScene {
     }
     
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        /*Called Every Frame*/
     }
 }
