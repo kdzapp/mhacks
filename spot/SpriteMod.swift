@@ -27,6 +27,7 @@ class Sprite: SKSpriteNode{
     private var ammo = 50;
     private var colorOfSprite: spriteColor
     private var life = 3;
+    var explode = SKEmitterNode(fileNamed: "Splat")
     var spriteTexture: SKTexture
     var spriteSize = CGSize(width: 100, height: 100)
     var spritePhysics = SKPhysicsBody(circleOfRadius: 40)
@@ -40,15 +41,19 @@ class Sprite: SKSpriteNode{
         switch colorOfSprite {
         case .blue:
             spriteTexture = SKTexture.init(imageNamed: "Sprite3")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite3")
             break
         case .red:
             spriteTexture = SKTexture.init(imageNamed: "Sprite2")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite2")
             break
         case .yellow:
             spriteTexture = SKTexture.init(imageNamed: "Sprite4")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite4")
             break
         case .green:
             spriteTexture = SKTexture.init(imageNamed: "Sprite1")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite1")
             break
         }
         
@@ -79,15 +84,19 @@ class Sprite: SKSpriteNode{
         switch colorOfSprite {
         case .blue:
             spriteTexture = SKTexture.init(imageNamed: "Sprite3")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite3")
             break
         case .red:
             spriteTexture = SKTexture.init(imageNamed: "Sprite2")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite2")
             break
         case .yellow:
             spriteTexture = SKTexture.init(imageNamed: "Sprite4")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite4")
             break
         case .green:
             spriteTexture = SKTexture.init(imageNamed: "Sprite1")
+            explode?.particleTexture = SKTexture.init(imageNamed: "Sprite1")
             break
         }
         

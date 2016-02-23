@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -95,8 +96,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                     if(sprite!.getLife() == 0)
                     {
-                        print("Game Over")
+                        //Set Position of Explostion
+                        sprite?.explode?.position = (sprite?.position)!
+                        //Explode
+                        self.addChild(sprite!.explode!)
                         sprite!.removeFromParent()
+                        print("Game Over")
+                        //Figure out "Game Over"
+                        
                     }
                 }
             }
@@ -104,10 +111,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //If a projectile hits another projectile
         else if(body1.categoryBitMask == projectileHitCategory && body2.categoryBitMask == projectileHitCategory) {
             if let _ = body1.node {
-                removeFromParent()
+                body1.node?.removeFromParent()
             }
             if let _ = body2.node {
-                removeFromParent()
+                body2.node?.removeFromParent()
             }
         }
     }
