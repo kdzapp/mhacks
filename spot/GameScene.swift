@@ -102,8 +102,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         self.addChild(sprite!.explode!)
                         sprite!.removeFromParent()
                         print("Game Over")
-                        //Figure out "Game Over"
-                        
+                        //Figure out "Game Over" Overlay
                     }
                 }
             }

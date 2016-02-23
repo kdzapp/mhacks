@@ -38,11 +38,13 @@ class StartGameScene: SKScene {
                 
                 if(node.name == "play") {
                     let playGameScene = PlayerSelectGameScene(fileNamed: "PlayerSelectGameScene")
-                    let transition = SKTransition()
+                    let transition = SKTransition.crossFadeWithDuration(2)
                     
+                    
+                    let action = SKAction.scaleBy(20, duration: 0.5)
+                    node.runAction(action)
                     
                     playGameScene!.scaleMode = .AspectFill
-                    
                     self.view?.presentScene(playGameScene!, transition: transition)
                 }
                 

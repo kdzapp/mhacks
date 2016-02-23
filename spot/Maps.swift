@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import Foundation
 
 //Create Map Function
 
@@ -94,16 +95,16 @@ func createMap() -> SKNode {
     //     wallSqr.wallColor = UIColor.redColor()
     //}
     
-    let rand = random() % 3
+    let rand = arc4random() % 3
     
     print(rand)
     
     switch rand {
-    case 1:
+    case 0:
         return viewer1
-    case 2:
+    case 1:
         return viewer2
-    case 3:
+    case 2:
         return viewer3
     default:
         return viewer1
