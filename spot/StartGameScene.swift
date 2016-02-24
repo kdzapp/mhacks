@@ -38,7 +38,7 @@ class StartGameScene: SKScene {
                 
                 if(node.name == "play") {
                     let playGameScene = PlayerSelectGameScene(fileNamed: "PlayerSelectGameScene")
-                    let transition = SKTransition.crossFadeWithDuration(1)
+                    let transition = SKTransition.fadeWithColor(UIColor.greenColor(), duration: <#T##NSTimeInterval#>)
                     
                     playGameScene!.scaleMode = .AspectFill
                     self.view?.presentScene(playGameScene!, transition: transition)

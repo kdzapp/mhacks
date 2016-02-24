@@ -103,6 +103,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         sprite!.removeFromParent()
                         print("Game Over")
                         //Figure out "Game Over" Overlay
+                        let startGameScene = StartGameScene(fileNamed: "StartGameScene")
+                        let transition = SKTransition.crossFadeWithDuration(2)
+                        
+                        startGameScene!.scaleMode = .AspectFill
+                        self.view?.presentScene(startGameScene!, transition: transition)
                     }
                 }
             }

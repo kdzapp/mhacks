@@ -83,7 +83,7 @@ func createMap() -> SKNode {
     wallBottomRight.zRotation = 0.78
     viewer3.addChild(wallBottomRight)
     let wallSqr33 = Wall(width: 120, height: 120, xCord: 500, yCord: 380)
-    wallSqr.runAction(repeateAction, withKey: "rotate")
+    wallSqr33.runAction(repeateAction, withKey: "rotate")
     viewer3.addChild(wallSqr33)
     let wallTopBorder3 = Wall(width: 1100, height: 10, xCord: 500, yCord: 679)
     viewer3.addChild(wallTopBorder3)

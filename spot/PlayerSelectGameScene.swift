@@ -49,7 +49,7 @@ class PlayerSelectGameScene: SKScene {
             let node = self.nodeAtPoint(position)
             
             let playGameScene = GameScene(fileNamed: "GameScene")
-            let transition = SKTransition()
+            let transition = SKTransition.crossFadeWithDuration(1)
             playGameScene!.scaleMode = .AspectFill
             
             switch node.name! {
@@ -81,5 +81,6 @@ class PlayerSelectGameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        //If Object is bigger than X, then fade out and start game :D
     }
 }
