@@ -10,6 +10,11 @@ import SpriteKit
 
 class PlayerSelectGameScene: SKScene {
     
+    let green = UIColor(red: 0, green: (230/255), blue: (118/255), alpha: 1)
+    let red = UIColor(red: 1, green: (23/255), blue: (68/255), alpha: 1)
+    let blue = UIColor(red: (41/255), green: (121/255), blue: 1, alpha: 1)
+    let yellow = UIColor(red: 1, green: (234/255), blue: 0, alpha: 1)
+    
     var gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
     
     override func didMoveToView(view: SKView) {
@@ -49,28 +54,32 @@ class PlayerSelectGameScene: SKScene {
             let node = self.nodeAtPoint(position)
             
             let playGameScene = GameScene(fileNamed: "GameScene")
-            let transition = SKTransition.crossFadeWithDuration(1)
+            var transition = SKTransition()
             playGameScene!.scaleMode = .AspectFill
             
             switch node.name! {
             case "sprite1":
                 playGameScene!.player.setColor(spriteColor.green)
                 playGameScene!.enemy.setColor(spriteColor.yellow)
+                transition = SKTransition.fadeWithColor(green, duration: 1)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite2":
                 playGameScene!.player.setColor(spriteColor.red)
                 playGameScene!.enemy.setColor(spriteColor.blue)
+                transition = SKTransition.fadeWithColor(red, duration: 1)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite3":
                 playGameScene!.player.setColor(spriteColor.blue)
                 playGameScene!.enemy.setColor(spriteColor.red)
+                transition = SKTransition.fadeWithColor(blue, duration: 1)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             case "sprite4":
                 playGameScene!.player.setColor(spriteColor.yellow)
                 playGameScene!.enemy.setColor(spriteColor.green)
+                transition = SKTransition.fadeWithColor(yellow, duration: 1)
                 self.view?.presentScene(playGameScene!, transition: transition)
                 break
             default:

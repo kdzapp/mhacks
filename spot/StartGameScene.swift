@@ -11,6 +11,7 @@ import SpriteKit
 class StartGameScene: SKScene {
     
     var gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
+    let gameStartColor = UIColor(red: 0, green: (230/255), blue: (118/255), alpha: 1)
     let playButton = SKSpriteNode(texture: SKTexture(imageNamed: "play"), color: UIColor(), size: CGSize(width: 200, height: 200))
     
     override func didMoveToView(view: SKView) {
@@ -38,7 +39,7 @@ class StartGameScene: SKScene {
                 
                 if(node.name == "play") {
                     let playGameScene = PlayerSelectGameScene(fileNamed: "PlayerSelectGameScene")
-                    let transition = SKTransition.fadeWithColor(UIColor.greenColor(), duration: <#T##NSTimeInterval#>)
+                    let transition = SKTransition.fadeWithColor(gameStartColor, duration: 1)
                     
                     playGameScene!.scaleMode = .AspectFill
                     self.view?.presentScene(playGameScene!, transition: transition)

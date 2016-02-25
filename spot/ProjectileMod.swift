@@ -15,16 +15,20 @@ class Projectile: SKSpriteNode {
     
     private var colorOfProjectile: spriteColor
     private var bounce = 1
+    var explode = SKEmitterNode(fileNamed: "ParticleSplat")
     let projectilePhysics = SKPhysicsBody(circleOfRadius: 8)
     
     init (sprite: Sprite) {
         
-        colorOfProjectile = sprite.getColor();
+        colorOfProjectile = sprite.getColor()
+        explode?.particleTexture = sprite.getTexture()
+        explode?.name = "ParticleExplosion"
         
         super.init(texture: sprite.getTexture(), color: UIColor(), size: CGSize(width: 20, height: 20))
         
         projectilePhysics.dynamic = true
         projectilePhysics.affectedByGravity = false
+        projectilePhysics.mass = 0
         
         projectilePhysics.categoryBitMask = projectileHitCategory
         projectilePhysics.contactTestBitMask = mapHitCategory

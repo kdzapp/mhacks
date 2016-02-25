@@ -63,6 +63,7 @@ class Sprite: SKSpriteNode{
         //Physics
         spritePhysics.affectedByGravity = false;
         spritePhysics.dynamic = true
+        spritePhysics.mass = 75
         
         spritePhysics.categoryBitMask = spriteHitCategory
         spritePhysics.contactTestBitMask = projectileHitCategory

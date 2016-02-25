@@ -17,7 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let enemy = Sprite(color: spriteColor.red)
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
 
-    
     override func didMoveToView(view: SKView) {
         
         //Set Background Color
@@ -37,6 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Physical Boarder
         let gamePhysics = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        gamePhysics.categoryBitMask = mapHitCategory
         self.physicsBody = gamePhysics
         
         joystick.position = CGPoint(x: 200, y: 265)
@@ -79,7 +79,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     projectile.decBounce()
                 }
                 else {
+                    projectile.explode?.position = projectile.position
+                    self.addChild(projectile.explode!)
                     projectile.removeFromParent()
+                    //Explode
                 }
             }
         }
@@ -91,6 +94,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //If the projectile is NOT from the Sprite who made it...
                 if(sprite!.getColor() != projectile!.getColor()) {
                 
+                    projectile!.explode?.position = projectile!.position
+                    self.addChild(projectile!.explode!)
                     projectile!.removeFromParent()
                     sprite!.hit()
                 
@@ -103,11 +108,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         sprite!.removeFromParent()
                         print("Game Over")
                         //Figure out "Game Over" Overlay
-                        let startGameScene = StartGameScene(fileNamed: "StartGameScene")
-                        let transition = SKTransition.crossFadeWithDuration(2)
+                        //let startGameScene = StartGameScene(fileNamed: "StartGameScene")
+                        //let transition = SKTransition.crossFadeWithDuration(2)
                         
-                        startGameScene!.scaleMode = .AspectFill
-                        self.view?.presentScene(startGameScene!, transition: transition)
+                        //startGameScene!.scaleMode = .AspectFill
+                        //self.view?.presentScene(startGameScene!, transition: transition)
                     }
                 }
             }
@@ -124,6 +129,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        //Updated Every Frame
+        
     }
 }
