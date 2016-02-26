@@ -119,11 +119,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         //If a projectile hits another projectile
         else if(body1.categoryBitMask == projectileHitCategory && body2.categoryBitMask == projectileHitCategory) {
-            if let _ = body1.node {
-                body1.node?.removeFromParent()
+            if let projectile = body1.node  as! Projectile? {
+                projectile.explode?.position = projectile.position
+                self.addChild(projectile.explode!)
+                projectile.removeFromParent()
             }
-            if let _ = body2.node {
-                body2.node?.removeFromParent()
+            if let projectile = body2.node as! Projectile? {
+                projectile.explode?.position = projectile.position
+                self.addChild(projectile.explode!)
+                projectile.removeFromParent()
             }
         }
     }
