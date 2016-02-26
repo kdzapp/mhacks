@@ -53,7 +53,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var location = CGPoint(x: 0, y: 0)
         
         for touch in touches {
+            let position = touch.locationInNode(self)
+            let node = self.nodeAtPoint(position)
+            
             location = touch.locationInNode(self)
+            
+            if(node.name == "gameover") {
+                
+                let startGameScene = StartGameScene(fileNamed: "StartGameScene")
+                let transition = SKTransition.fadeWithColor(gameBackgroundColor, duration: 2)
+                
+                startGameScene!.scaleMode = .AspectFill
+                self.view?.presentScene(startGameScene!, transition: transition)
+                
+            }
         }
         
         let projectile = Projectile(sprite: player)
@@ -108,11 +121,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         sprite!.removeFromParent()
                         print("Game Over")
                         //Figure out "Game Over" Overlay
-                        //let startGameScene = StartGameScene(fileNamed: "StartGameScene")
-                        //let transition = SKTransition.crossFadeWithDuration(2)
-                        
-                        //startGameScene!.scaleMode = .AspectFill
-                        //self.view?.presentScene(startGameScene!, transition: transition)
+                        let overlay = SKSpriteNode(color: UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85), size: self.size)
+                        let gameOver = SKSpriteNode(imageNamed: "gameover")
+                        overlay.zPosition = 100
+                        gameOver.zPosition = 101
+                        gameOver.name = "gameover"
+                        gameOver.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
+                        //This Is How You CENTER A NODE (BC Fuck That)
+                        overlay.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
+                        self.addChild(overlay)
+                        self.addChild(gameOver)
                     }
                 }
             }
