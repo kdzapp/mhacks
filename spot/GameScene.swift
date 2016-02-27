@@ -64,7 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             location = touch.locationInNode(self)
             
-            if(node.name == "gameover") {
+            if(node.name == "win" || node.name == "lost") {
                 
                 let startGameScene = StartGameScene(fileNamed: "StartGameScene")
                 let transition = SKTransition.fadeWithColor(gameBackgroundColor, duration: 1)
@@ -212,15 +212,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if(sprite == player) {
                     //You Lost
-                    gameOver = SKSpriteNode(imageNamed: "lost")
+                    if gameOver.name == nil {
+                        gameOver = SKSpriteNode(imageNamed: "lost")
+                        gameOver.name = "lost"
+                    }
                 }
                 else {
                     //You Won
-                    gameOver = SKSpriteNode(imageNamed: "won")
+                    if gameOver.name == nil {
+                        gameOver = SKSpriteNode(imageNamed: "won")
+                        gameOver.name = "won"
+                    }
                 }
                 
                 gameOver.zPosition = 101
-                gameOver.name = "gameover"
                 gameOver.position = centerOverlay
                 
                 self.addChild(gameOver)
