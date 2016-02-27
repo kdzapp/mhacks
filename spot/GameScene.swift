@@ -22,7 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
     var time = 0.0
-
+    var gameOver = SKSpriteNode()
+    
     override func didMoveToView(view: SKView) {
         
         //Set Background Color
@@ -206,7 +207,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let overlay = SKSpriteNode(color: overlayColor, size: self.size)
                 let centerOverlay = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
                 
-                var gameOver = SKSpriteNode()
                 overlay.zPosition = 100
                 overlay.position = centerOverlay
                 
