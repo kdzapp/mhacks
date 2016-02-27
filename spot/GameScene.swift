@@ -215,6 +215,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if gameOver.name == nil {
                         gameOver = SKSpriteNode(imageNamed: "lost")
                         gameOver.name = "lost"
+                        gameOver.zPosition = 101
+                        gameOver.position = centerOverlay
+                        
+                        self.addChild(gameOver)
+                        self.addChild(overlay)
                     }
                 }
                 else {
@@ -222,14 +227,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     if gameOver.name == nil {
                         gameOver = SKSpriteNode(imageNamed: "won")
                         gameOver.name = "won"
+                        gameOver.zPosition = 101
+                        gameOver.position = centerOverlay
+                        
+                        self.addChild(gameOver)
+                        self.addChild(overlay)
                     }
                 }
                 
-                gameOver.zPosition = 101
-                gameOver.position = centerOverlay
-                
-                self.addChild(gameOver)
-                self.addChild(overlay)
             }
         }
     }
