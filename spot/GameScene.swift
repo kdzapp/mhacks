@@ -65,7 +65,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             location = touch.locationInNode(self)
             
-            if(node.name == "win" || node.name == "lost") {
+            if(node.name == "won" || node.name == "lost") {
                 
                 let startGameScene = StartGameScene(fileNamed: "StartGameScene")
                 let transition = SKTransition.fadeWithColor(gameBackgroundColor, duration: 1)
@@ -203,7 +203,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //Game Over Overlay
                 print("Game Over")
-                let overlayColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85)
+                let overlayColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.90)
                 let overlay = SKSpriteNode(color: overlayColor, size: self.size)
                 let centerOverlay = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
                 
