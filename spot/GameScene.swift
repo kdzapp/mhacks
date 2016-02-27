@@ -21,6 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let enemy = Sprite(color: spriteColor.red, hitCategory: 2)
     
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
+    var time = 0.0
 
     override func didMoveToView(view: SKView) {
         
@@ -66,7 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if(node.name == "gameover") {
                 
                 let startGameScene = StartGameScene(fileNamed: "StartGameScene")
-                let transition = SKTransition.fadeWithColor(gameBackgroundColor, duration: 2)
+                let transition = SKTransition.fadeWithColor(gameBackgroundColor, duration: 1)
                 
                 startGameScene!.scaleMode = .AspectFill
                 self.view?.presentScene(startGameScene!, transition: transition)
@@ -75,8 +76,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         let projectile = Projectile(sprite: player)
-        projectile.position = player.position
-        projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
+        
+        let dy = (location.y - player.position.y)
+        let dx = (location.x - player.position.x)
+        
+        projectile.setVelocity(dy, dx: dx, playerPos: player.position)
             
         self.addChild(projectile)
         
@@ -161,7 +165,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        
+        //AI Enemy
+        self.enemy.position = moveTowardPlayer(self.player, enemy: self.enemy)
+        if currentTime > time {
+            self.addChild(enemyProjectile(self.player, enemy: self.enemy))
+            time = currentTime + 0.5
+        }
     }
     
     

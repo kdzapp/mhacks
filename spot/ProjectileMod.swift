@@ -46,8 +46,16 @@ class Projectile: SKSpriteNode {
     
     /*-----------Setters----------*/
     
-    func setVelocity(dy: CGFloat, dx: CGFloat) {
-        
+    func setVelocity(dy: CGFloat, dx: CGFloat, playerPos: CGPoint) {
+        //Shoot Downward Fix
+        if(dy < 0) {
+            self.position.y = playerPos.y - 1
+            self.position.x = playerPos.x
+        }
+        else {
+            self.position.y = playerPos.y + 1
+            self.position.x = playerPos.x
+        }
         projectilePhysics.velocity = CGVector(dx: dx*3, dy: dy*3)
     }
     

@@ -33,11 +33,12 @@ func moveAwayFromPlayer(player: Sprite, enemy: Sprite) -> CGPoint {
 }
 
 func enemyProjectile(player: Sprite, enemy: Sprite) -> Projectile {
+    
     let projectile = Projectile(sprite: enemy)
     var location: CGPoint
     location = player.position
-    projectile.position = enemy.position
-    projectile.setVelocity((location.y - projectile.position.y), dx: (location.x-projectile.position.x))
+    
+    projectile.setVelocity((location.y - enemy.position.y), dx: (location.x - enemy.position.x), playerPos: enemy.position)
     
     return projectile
     
