@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "gameover.png",
+      "filename" : "lost.png",
       "scale" : "1x"
     },
     {

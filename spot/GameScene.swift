@@ -184,24 +184,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             projectile.removeFromParent()
             sprite.hit()
             
+            //Remove Left Over Projectiles
+            for child in self.children {
+                if(child.name == "projectile") {
+                    child.removeFromParent()
+                }
+            }
+            
             if(sprite.getLife() == 0)
             {
                 //Set Position of Explostion
                 sprite.explode?.position = sprite.position
+                
                 //Explode
                 self.addChild(sprite.explode!)
                 sprite.removeFromParent()
+                
+                //Game Over Overlay
                 print("Game Over")
-                //"Game Over" Overlay
-                let overlay = SKSpriteNode(color: UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85), size: self.size)
-                let gameOver = SKSpriteNode(imageNamed: "gameover")
+                let overlayColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85)
+                let overlay = SKSpriteNode(color: overlayColor, size: self.size)
+                let centerOverlay = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
+                
+                var gameOver = SKSpriteNode()
                 overlay.zPosition = 100
+                overlay.position = centerOverlay
+                
+                if(sprite == player) {
+                    //You Lost
+                    gameOver = SKSpriteNode(imageNamed: "lost")
+                }
+                else {
+                    //You Won
+                    gameOver = SKSpriteNode(imageNamed: "won")
+                }
+                
                 gameOver.zPosition = 101
                 gameOver.name = "gameover"
-                gameOver.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
-                overlay.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
-                self.addChild(overlay)
+                gameOver.position = centerOverlay
+                
                 self.addChild(gameOver)
+                self.addChild(overlay)
             }
         }
     }
