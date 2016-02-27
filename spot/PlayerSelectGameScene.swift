@@ -14,12 +14,15 @@ class PlayerSelectGameScene: SKScene {
     let red = UIColor(red: 1, green: (23/255), blue: (68/255), alpha: 1)
     let blue = UIColor(red: (41/255), green: (121/255), blue: 1, alpha: 1)
     let yellow = UIColor(red: 1, green: (234/255), blue: 0, alpha: 1)
+    let selection = SKSpriteNode(texture: SKTexture(imageNamed: "selection"), size: CGSize(width: 200, height: 200))
     
     var gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
+    var currentSelection = SKNode()
     
     override func didMoveToView(view: SKView) {
         //Background Color
         self.scene?.backgroundColor = gameBackgroundColor
+        selection.name = "selection"
         
         //Create Scene
         let headerText = SKSpriteNode(imageNamed: "selectplayer")
@@ -58,14 +61,37 @@ class PlayerSelectGameScene: SKScene {
             
                 if(node.name == "sprite1" || node.name == "sprite2" ||
                     node.name == "sprite3" || node.name == "sprite4") {
-                        //Add Shader
+                        selection.position = node.position
+                        selection.zPosition = -1
+                        currentSelection = node
+                        self.addChild(selection)
                 }
             }
         }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        //If The Touch location is on the node, keep the node shaded, otherwise removeChild
+        for touch in touches {
+            let position = touch.locationInNode(self)
+            
+            if let node = nodeAtPoint(position) as SKNode? {
+                if(node != currentSelection) {
+                    for child in self.children {
+                        if child.name == "selection" {
+                            child.removeFromParent()
+                        }
+                    }
+                if(node.name == "sprite1" || node.name == "sprite2" ||
+                    node.name == "sprite3" || node.name == "sprite4") {
+                        selection.position = node.position
+                        selection.zPosition = -1
+                        currentSelection = node
+                        self.addChild(selection)
+                    }
+
+                }
+            }
+        }
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
