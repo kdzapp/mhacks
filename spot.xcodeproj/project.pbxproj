@@ -27,6 +27,7 @@
 		27A4E9471C7FB07400E3E1CD /* ParticleSplat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27A4E9451C7FB07400E3E1CD /* ParticleSplat.sks */; };
 		27D37A2C1C7B5D35009CBDBE /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D37A2B1C7B5D35009CBDBE /* Maps.swift */; };
 		27D37A331C7C1788009CBDBE /* Splat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27D37A311C7C1788009CBDBE /* Splat.sks */; };
+		AD5F58EC1C814E5600C47E83 /* EnemyAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F58EB1C814E5600C47E83 /* EnemyAI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		27A4E9451C7FB07400E3E1CD /* ParticleSplat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParticleSplat.sks; sourceTree = "<group>"; };
 		27D37A2B1C7B5D35009CBDBE /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		27D37A311C7C1788009CBDBE /* Splat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Splat.sks; path = ../Splat.sks; sourceTree = "<group>"; };
+		AD5F58EB1C814E5600C47E83 /* EnemyAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				27D37A311C7C1788009CBDBE /* Splat.sks */,
 				27A4E9451C7FB07400E3E1CD /* ParticleSplat.sks */,
 				273F99531C77F7EA002F1B9B /* MapWall.swift */,
+				AD5F58EB1C814E5600C47E83 /* EnemyAI.swift */,
 				273F99541C77F7EA002F1B9B /* ProjectileMod.swift */,
 				273F99551C77F7EA002F1B9B /* SpriteMod.swift */,
 				273F99251C77F72D002F1B9B /* GameScene.swift */,
@@ -313,6 +316,7 @@
 				276479AA1C7879090038C48C /* AnalogJoystick.swift in Sources */,
 				273F99571C77F7EA002F1B9B /* ProjectileMod.swift in Sources */,
 				273F99281C77F72D002F1B9B /* GameViewController.swift in Sources */,
+				AD5F58EC1C814E5600C47E83 /* EnemyAI.swift in Sources */,
 				27D37A2C1C7B5D35009CBDBE /* Maps.swift in Sources */,
 				2729681E1C78675000D31EB6 /* PlayerSelectGameScene.swift in Sources */,
 				273F99561C77F7EA002F1B9B /* MapWall.swift in Sources */,
