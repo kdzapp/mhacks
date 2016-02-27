@@ -13,8 +13,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     let joystick = AnalogJoystick(diameters: (substrate: 130, stick: 70), colors: (substrate: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.7), stick: UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)), images: (nil))
-    let player = Sprite(color: spriteColor.green)
-    let enemy = Sprite(color: spriteColor.red)
+    
+    let playerHitCategory: UInt32 = 1
+    let enemyHitCategory: UInt32 = 2
+    
+    let player = Sprite(color: spriteColor.green, hitCategory: 1)
+    let enemy = Sprite(color: spriteColor.red, hitCategory: 2)
+    
     let gameBackgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 1)
 
     override func didMoveToView(view: SKView) {
@@ -77,80 +82,118 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    //Collision Function
+    //------------------Collision Function------------------//
     func didBeginContact(contact: SKPhysicsContact) {
         
         //Projectile will be Body2 when hitting wall
         let body1 = contact.bodyA
         let body2 = contact.bodyB
         
-        if(body1.categoryBitMask == mapHitCategory && body2.categoryBitMask == projectileHitCategory)
-        {
-            if let projectile = body2.node as! Projectile?
-            {
-                if(projectile.getBounce() != 0) {
-                    projectile.decBounce()
-                }
-                else {
-                    projectile.explode?.position = projectile.position
-                    self.addChild(projectile.explode!)
-                    projectile.removeFromParent()
-                    //Explode
+        
+        /************* Wall Collisions **************/
+        if(body1.categoryBitMask == mapHitCategory || body2.categoryBitMask == mapHitCategory ) {
+            if body2.node?.name == "projectile" {
+                if let projectile = body2.node as! Projectile? {
+                    if(projectile.getBounce() != 0) {
+                        projectile.decBounce()
+                    }
+                    else {
+                        projectile.explode?.position = projectile.position
+                        self.addChild(projectile.explode!)
+                        projectile.removeFromParent()
+                    }
                 }
             }
-        }
-        else if(body1.categoryBitMask == spriteHitCategory && body2.categoryBitMask == projectileHitCategory)
-        {
-            let sprite = body1.node as! Sprite?
-            let projectile = body2.node as! Projectile?
-            if (sprite != nil && projectile != nil)  {
-            //If the projectile is NOT from the Sprite who made it...
-                if(sprite!.getColor() != projectile!.getColor()) {
-                
-                    projectile!.explode?.position = projectile!.position
-                    self.addChild(projectile!.explode!)
-                    projectile!.removeFromParent()
-                    sprite!.hit()
-                
-                    if(sprite!.getLife() == 0)
-                    {
-                        //Set Position of Explostion
-                        sprite?.explode?.position = (sprite?.position)!
-                        //Explode
-                        self.addChild(sprite!.explode!)
-                        sprite!.removeFromParent()
-                        print("Game Over")
-                        //Figure out "Game Over" Overlay
-                        let overlay = SKSpriteNode(color: UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85), size: self.size)
-                        let gameOver = SKSpriteNode(imageNamed: "gameover")
-                        overlay.zPosition = 100
-                        gameOver.zPosition = 101
-                        gameOver.name = "gameover"
-                        gameOver.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
-                        //This Is How You CENTER A NODE (BC Fuck That)
-                        overlay.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
-                        self.addChild(overlay)
-                        self.addChild(gameOver)
+            else if body1.node?.name == "projectile" {
+                if let projectile = body1.node as! Projectile? {
+                    if(projectile.getBounce() != 0) {
+                        projectile.decBounce()
+                    }
+                    else {
+                        projectile.explode?.position = projectile.position
+                        self.addChild(projectile.explode!)
+                        projectile.removeFromParent()
                     }
                 }
             }
         }
-        //If a projectile hits another projectile
-        else if(body1.categoryBitMask == projectileHitCategory && body2.categoryBitMask == projectileHitCategory) {
-            if let projectile = body1.node  as! Projectile? {
-                projectile.explode?.position = projectile.position
-                self.addChild(projectile.explode!)
-                projectile.removeFromParent()
+        
+        /*********** All Other Collision **********/
+        else {
+            
+            /***** Projectile-Projectile Collision *****/
+            if body1.node?.name == "projectile" {
+                if let projectile = body1.node as! Projectile? {
+                    if body2.node?.name == "projectile" {
+                        if let projectile2 = body2.node as! Projectile? {
+                            //Explode Projectile 1
+                            projectile.explode?.position = projectile.position
+                            self.addChild(projectile.explode!)
+                            //Explode Projectile 2
+                            projectile2.explode?.position = projectile.position
+                            self.addChild(projectile2.explode!)
+                            //Remove Projectiles
+                            projectile2.removeFromParent()
+                            projectile.removeFromParent()
+                        }
+                    }
+            /*********** Projectile-Sprite Collision ***********/
+                    else {
+                        if let sprite = body2.node as! Sprite? {
+                            spriteGotShot(sprite, projectile: projectile)
+                        }
+                    }
+                }
             }
-            if let projectile = body2.node as! Projectile? {
-                projectile.explode?.position = projectile.position
-                self.addChild(projectile.explode!)
-                projectile.removeFromParent()
+        
+            /*********** Projectile-Sprite Collision ***********/
+            else if body2.node?.name == "projectile" {
+                if let projectile = body2.node as! Projectile? {
+                    if let sprite = body1.node as! Sprite? {
+                        spriteGotShot(sprite, projectile: projectile)
+                    }
+                }
+            }
+            else {
+                //Two Sprites Are Interacting
             }
         }
     }
    
     override func update(currentTime: CFTimeInterval) {
         
+    }
+    
+    
+    /*********** Sprite Contact with Projectile *************/
+    
+    func spriteGotShot(sprite: Sprite, projectile: Projectile) {
+        
+        if sprite.getColor() != projectile.getColor() {
+            projectile.explode?.position = projectile.position
+            self.addChild(projectile.explode!)
+            projectile.removeFromParent()
+            sprite.hit()
+            
+            if(sprite.getLife() == 0)
+            {
+                //Set Position of Explostion
+                sprite.explode?.position = sprite.position
+                //Explode
+                self.addChild(sprite.explode!)
+                sprite.removeFromParent()
+                print("Game Over")
+                //"Game Over" Overlay
+                let overlay = SKSpriteNode(color: UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.85), size: self.size)
+                let gameOver = SKSpriteNode(imageNamed: "gameover")
+                overlay.zPosition = 100
+                gameOver.zPosition = 101
+                gameOver.name = "gameover"
+                gameOver.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
+                overlay.position = CGPointMake(CGRectGetMaxX(self.frame)/2, CGRectGetMaxY(self.frame)/2)
+                self.addChild(overlay)
+                self.addChild(gameOver)
+            }
+        }
     }
 }

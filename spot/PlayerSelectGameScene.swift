@@ -24,6 +24,7 @@ class PlayerSelectGameScene: SKScene {
         //Create Scene
         let headerText = SKSpriteNode(imageNamed: "selectplayer")
         headerText.position = CGPoint(x: 500,y: 490)
+        headerText.name = "header"
         
         let sprite1 = SKSpriteNode(texture: SKTexture(imageNamed: "Sprite1"), color: UIColor(), size: CGSize(width: 200, height: 200))
         sprite1.position = CGPoint(x: 200,y: 280)
@@ -49,41 +50,62 @@ class PlayerSelectGameScene: SKScene {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //Set Color
         for touch in touches {
             let position = touch.locationInNode(self)
-            let node = self.nodeAtPoint(position)
             
-            let playGameScene = GameScene(fileNamed: "GameScene")
-            var transition = SKTransition()
-            playGameScene!.scaleMode = .AspectFill
+            if let node = self.nodeAtPoint(position) as SKNode? {
             
-            switch node.name! {
-            case "sprite1":
-                playGameScene!.player.setColor(spriteColor.green)
-                playGameScene!.enemy.setColor(spriteColor.yellow)
-                transition = SKTransition.fadeWithColor(green, duration: 1)
-                self.view?.presentScene(playGameScene!, transition: transition)
-                break
-            case "sprite2":
-                playGameScene!.player.setColor(spriteColor.red)
-                playGameScene!.enemy.setColor(spriteColor.blue)
-                transition = SKTransition.fadeWithColor(red, duration: 1)
-                self.view?.presentScene(playGameScene!, transition: transition)
-                break
-            case "sprite3":
-                playGameScene!.player.setColor(spriteColor.blue)
-                playGameScene!.enemy.setColor(spriteColor.red)
-                transition = SKTransition.fadeWithColor(blue, duration: 1)
-                self.view?.presentScene(playGameScene!, transition: transition)
-                break
-            case "sprite4":
-                playGameScene!.player.setColor(spriteColor.yellow)
-                playGameScene!.enemy.setColor(spriteColor.green)
-                transition = SKTransition.fadeWithColor(yellow, duration: 1)
-                self.view?.presentScene(playGameScene!, transition: transition)
-                break
-            default:
-                break
+                if(node.name == "sprite1" || node.name == "sprite2" ||
+                    node.name == "sprite3" || node.name == "sprite4") {
+                        //Add Shader
+                }
+            }
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //If The Touch location is on the node, keep the node shaded, otherwise removeChild
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches {
+            let position = touch.locationInNode(self)
+            if let node = self.nodeAtPoint(position) as SKNode? {
+                
+                let playGameScene = GameScene(fileNamed: "GameScene")
+                var transition = SKTransition()
+                playGameScene!.scaleMode = .AspectFill
+                if (node.name != nil) {
+                    switch node.name! {
+                    case "sprite1":
+                        playGameScene!.player.setColor(spriteColor.green)
+                        playGameScene!.enemy.setColor(spriteColor.yellow)
+                        transition = SKTransition.fadeWithColor(green, duration: 1)
+                        self.view?.presentScene(playGameScene!, transition: transition)
+                        break
+                    case "sprite2":
+                        playGameScene!.player.setColor(spriteColor.red)
+                        playGameScene!.enemy.setColor(spriteColor.blue)
+                        transition = SKTransition.fadeWithColor(red, duration: 1)
+                        self.view?.presentScene(playGameScene!, transition: transition)
+                        break
+                    case "sprite3":
+                        playGameScene!.player.setColor(spriteColor.blue)
+                        playGameScene!.enemy.setColor(spriteColor.red)
+                        transition = SKTransition.fadeWithColor(blue, duration: 1)
+                        self.view?.presentScene(playGameScene!, transition: transition)
+                        break
+                    case "sprite4":
+                        playGameScene!.player.setColor(spriteColor.yellow)
+                        playGameScene!.enemy.setColor(spriteColor.green)
+                        transition = SKTransition.fadeWithColor(yellow, duration: 1)
+                        self.view?.presentScene(playGameScene!, transition: transition)
+                        break
+                    default:
+                        break
+                    }
+                }
             }
         }
     }

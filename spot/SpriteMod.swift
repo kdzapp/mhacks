@@ -9,8 +9,6 @@
 import Foundation
 import SpriteKit
 
-let spriteHitCategory: UInt32 = 0
-
 //------Enums-------//
 
 enum spriteColor {
@@ -27,14 +25,16 @@ class Sprite: SKSpriteNode{
     private var ammo = 50;
     private var colorOfSprite: spriteColor
     private var life = 3;
+    var spriteHitCategory: UInt32 = 0
     var explode = SKEmitterNode(fileNamed: "Splat")
     var spriteTexture: SKTexture
     var spriteSize = CGSize(width: 100, height: 100)
     var spritePhysics = SKPhysicsBody(circleOfRadius: 40)
     
-    init(color: spriteColor) {
+    init(color: spriteColor, hitCategory: UInt32) {
         
         colorOfSprite = color
+        spriteHitCategory = hitCategory
         
         //Load Sprite With Color
         
@@ -66,8 +66,15 @@ class Sprite: SKSpriteNode{
         spritePhysics.mass = 75
         
         spritePhysics.categoryBitMask = spriteHitCategory
-        spritePhysics.contactTestBitMask = projectileHitCategory
-        spritePhysics.collisionBitMask = projectileHitCategory
+        
+        if(spriteHitCategory == 1) {
+            spritePhysics.contactTestBitMask = 2
+            spritePhysics.collisionBitMask = 2
+        }
+        else {
+            spritePhysics.contactTestBitMask = 1
+            spritePhysics.collisionBitMask = 1
+        }
         self.physicsBody = spritePhysics
 
     }

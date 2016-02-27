@@ -22,7 +22,7 @@ class StartGameScene: SKScene {
         let headerText = SKSpriteNode(imageNamed: "header")
         headerText.size = CGSize(width: 744, height: 297)
         headerText.position = CGPoint(x: 500,y: 490)
-    
+        
         playButton.position = CGPoint(x: 500,y: 230)
         playButton.name = "play";
         
@@ -31,6 +31,22 @@ class StartGameScene: SKScene {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //Set Color
+        for touch in touches {
+            let position = touch.locationInNode(self)
+            if let node = self.nodeAtPoint(position) as SKNode? {
+                if(node.name == "play") {
+                    //Add Shader
+                }
+            }
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //If The Touch location is on the node, keep the node shaded, otherwise removeChild
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
             for touch in touches
             {

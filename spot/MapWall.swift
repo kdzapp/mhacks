@@ -30,8 +30,8 @@ class Wall: SKSpriteNode {
         //Physics
         wallPhysics.dynamic = false
         wallPhysics.categoryBitMask = mapHitCategory
-        wallPhysics.contactTestBitMask = projectileHitCategory
-        wallPhysics.collisionBitMask = projectileHitCategory
+        //wallPhysics.contactTestBitMask = projectileHitCategory
+        //wallPhysics.collisionBitMask = projectileHitCategory
         self.physicsBody = wallPhysics
         
     }

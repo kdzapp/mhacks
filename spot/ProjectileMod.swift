@@ -9,12 +9,11 @@
 import Foundation
 import SpriteKit
 
-let projectileHitCategory: UInt32 = 1
-
 class Projectile: SKSpriteNode {
     
     private var colorOfProjectile: spriteColor
     private var bounce = 1
+    var projectileHitCategory: UInt32 = 0
     var explode = SKEmitterNode(fileNamed: "ParticleSplat")
     let projectilePhysics = SKPhysicsBody(circleOfRadius: 8)
     
@@ -23,14 +22,19 @@ class Projectile: SKSpriteNode {
         colorOfProjectile = sprite.getColor()
         explode?.particleTexture = sprite.getTexture()
         explode?.name = "ParticleExplosion"
+        projectileHitCategory = sprite.spriteHitCategory
         
         super.init(texture: sprite.getTexture(), color: UIColor(), size: CGSize(width: 20, height: 20))
         
+        self.name = "projectile"
+        
         projectilePhysics.dynamic = true
         projectilePhysics.affectedByGravity = false
+        projectilePhysics.density = 0
         projectilePhysics.mass = 0
         
         projectilePhysics.categoryBitMask = projectileHitCategory
+        
         projectilePhysics.contactTestBitMask = mapHitCategory
         projectilePhysics.collisionBitMask = mapHitCategory
         self.physicsBody = projectilePhysics
